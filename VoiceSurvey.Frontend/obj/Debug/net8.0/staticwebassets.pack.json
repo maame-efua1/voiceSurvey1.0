@@ -1,0 +1,325 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\about.css",
+      "PackagePath": "staticwebassets\\css\\about.css"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\survey.css",
+      "PackagePath": "staticwebassets\\css\\survey.css"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\surveylist.css",
+      "PackagePath": "staticwebassets\\css\\surveylist.css"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\template.css",
+      "PackagePath": "staticwebassets\\css\\template.css"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Inter\\Inter-Black.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter\\Inter-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Inter\\Inter-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter\\Inter-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Inter\\Inter-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter\\Inter-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Inter\\Inter-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter\\Inter-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Inter\\Inter-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter\\Inter-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Inter\\Inter-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter\\Inter-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Inter\\Inter-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter\\Inter-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Inter\\Inter-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter\\Inter-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Inter\\Inter-Thin.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter\\Inter-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\OFL.txt",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\OFL.txt"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-Black.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-ExtraLightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-ExtraLightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-LightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-MediumItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-Thin.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\fonts\\Poppins\\Poppins-ThinItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins\\Poppins-ThinItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\about\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\about\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\about\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\about\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\account_circle_24dp_FILL0_wght400_GRAD0_opsz24 (1).svg",
+      "PackagePath": "staticwebassets\\images\\account_circle_24dp_FILL0_wght400_GRAD0_opsz24 (1).svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\ad1.jpg",
+      "PackagePath": "staticwebassets\\images\\ad1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\arrow_right_alt_FILL0_wght400_GRAD0_opsz24.svg",
+      "PackagePath": "staticwebassets\\images\\arrow_right_alt_FILL0_wght400_GRAD0_opsz24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\close-icon.svg",
+      "PackagePath": "staticwebassets\\images\\close-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\close_FILL0_wght400_GRAD0_opsz24.svg",
+      "PackagePath": "staticwebassets\\images\\close_FILL0_wght400_GRAD0_opsz24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\fact-check.svg",
+      "PackagePath": "staticwebassets\\images\\fact-check.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\header-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\header-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\login.png",
+      "PackagePath": "staticwebassets\\images\\login.png"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\logo.jpg",
+      "PackagePath": "staticwebassets\\images\\logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\logos\\facebook.svg",
+      "PackagePath": "staticwebassets\\images\\logos\\facebook.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\logos\\google.svg",
+      "PackagePath": "staticwebassets\\images\\logos\\google.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\logos\\ibm.svg",
+      "PackagePath": "staticwebassets\\images\\logos\\ibm.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\logos\\microsoft.svg",
+      "PackagePath": "staticwebassets\\images\\logos\\microsoft.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\logout.svg",
+      "PackagePath": "staticwebassets\\images\\logout.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\map-image.png",
+      "PackagePath": "staticwebassets\\images\\map-image.png"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\menu_FILL0_wght400_GRAD0_opsz24.svg",
+      "PackagePath": "staticwebassets\\images\\menu_FILL0_wght400_GRAD0_opsz24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\navbar-logo.svg",
+      "PackagePath": "staticwebassets\\images\\navbar-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\notification.svg",
+      "PackagePath": "staticwebassets\\images\\notification.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\overview.svg",
+      "PackagePath": "staticwebassets\\images\\overview.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\portfolio\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\portfolio\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\portfolio\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\portfolio\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\portfolio\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\portfolio\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\portfolio\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\portfolio\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\portfolio\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\portfolio\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\portfolio\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\portfolio\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\security.svg",
+      "PackagePath": "staticwebassets\\images\\security.svg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\signup.png",
+      "PackagePath": "staticwebassets\\images\\signup.png"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\suad-kamardeen-8PyNdtGL4Bg-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\suad-kamardeen-8PyNdtGL4Bg-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\survey.jpg",
+      "PackagePath": "staticwebassets\\images\\survey.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\sv.jpg",
+      "PackagePath": "staticwebassets\\images\\sv.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\team\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\team\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\images\\team\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\home.js",
+      "PackagePath": "staticwebassets\\js\\home.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.VoiceSurvey.Frontend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.VoiceSurvey.Frontend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.VoiceSurvey.Frontend.props",
+      "PackagePath": "build\\VoiceSurvey.Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.VoiceSurvey.Frontend.props",
+      "PackagePath": "buildMultiTargeting\\VoiceSurvey.Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.VoiceSurvey.Frontend.props",
+      "PackagePath": "buildTransitive\\VoiceSurvey.Frontend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

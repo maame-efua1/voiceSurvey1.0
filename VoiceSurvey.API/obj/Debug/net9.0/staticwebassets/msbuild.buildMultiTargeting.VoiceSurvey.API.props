@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\VoiceSurvey.API.props" />
+</Project>

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "9T8j034VQQz2EfidORXUqGligktTxezbiRLa6mj20YE=",
+  "Source": "VoiceSurvey.API",
+  "BasePath": "_content/VoiceSurvey.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
