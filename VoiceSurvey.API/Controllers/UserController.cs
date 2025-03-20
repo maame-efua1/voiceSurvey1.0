@@ -24,12 +24,12 @@ namespace VoiceSurvey.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
-            var users = await _userManager.Users.ToListAsync();
+            var users = await _userManager.Users.AsNoTracking().ToListAsync();
             return Ok(users);
         }
 
         [Authorize]
-        [HttpGet("GetUserById")]
+        [HttpGet("GetUserById/{id}")]
         public async Task<IActionResult> GetUserById(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -40,9 +40,29 @@ namespace VoiceSurvey.API.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpPost("AssignRole")]
-        public async Task<IActionResult> AssignRole([FromQuery] string userId, [FromBody] string roleName)
+        [HttpPost("AddRole")]
+        public async Task<IActionResult> AddRole([FromBody] string roleName)
         {
+            if (string.IsNullOrWhiteSpace(roleName))
+                return BadRequest(new { message = "Role name cannot be empty" });
+
+            if (await _roleManager.RoleExistsAsync(roleName))
+                return BadRequest(new { message = "Role already exists" });
+
+            var result = await _roleManager.CreateAsync(new IdentityRole(roleName));
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+            return Ok(new { message = $"Role '{roleName}' created successfully" });
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("AssignRole/{userId}")]
+        public async Task<IActionResult> AssignRole(string userId, [FromBody] string roleName)
+        {
+            if (string.IsNullOrWhiteSpace(roleName))
+                return BadRequest(new { message = "Role name cannot be empty" });
+
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
                 return NotFound(new { message = "User not found" });
@@ -58,9 +78,12 @@ namespace VoiceSurvey.API.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpPost("RemoveRole")]
-        public async Task<IActionResult> RemoveRole([FromQuery] string userId, [FromBody] string roleName)
+        [HttpPost("RemoveRole/{userId}")]
+        public async Task<IActionResult> RemoveRole(string userId, [FromBody] string roleName)
         {
+            if (string.IsNullOrWhiteSpace(roleName))
+                return BadRequest(new { message = "Role name cannot be empty" });
+
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
                 return NotFound(new { message = "User not found" });
@@ -84,13 +107,20 @@ namespace VoiceSurvey.API.Controllers
             return Ok(new { user = user.UserName, roles });
         }
 
-        [Authorize(Roles = "Admin")]
+        [AllowAnonymous]
         [HttpDelete("DeleteUser/{userId}")]
         public async Task<IActionResult> DeleteUser(string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
                 return NotFound(new { message = "User not found" });
+
+            // Remove user from all roles before deleting
+            var roles = await _userManager.GetRolesAsync(user);
+            foreach (var role in roles)
+            {
+                await _userManager.RemoveFromRoleAsync(user, role);
+            }
 
             var result = await _userManager.DeleteAsync(user);
             if (!result.Succeeded)
