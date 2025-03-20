@@ -11,7 +11,7 @@ public partial class Response
 
     public int QuestionId { get; set; }
 
-    public int UserId { get; set; }
+    public string? UserId { get; set; }
 
     public string? TextResponse { get; set; }
 
@@ -22,6 +22,4 @@ public partial class Response
     public virtual Question Question { get; set; } = null!;
 
     public virtual Survey Survey { get; set; } = null!;
-
-    public virtual AspNetUser User { get; set; } = null!;
 }

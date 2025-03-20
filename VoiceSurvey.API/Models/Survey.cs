@@ -11,11 +11,9 @@ public partial class Survey
 
     public string? Description { get; set; }
 
-    public int CreatedBy { get; set; }
+    public string? CreatedBy { get; set; }
 
     public DateTime? CreatedAt { get; set; }
-
-    public virtual AspNetUser CreatedByNavigation { get; set; } = null!;
 
     public virtual ICollection<Question> Questions { get; set; } = new List<Question>();
 

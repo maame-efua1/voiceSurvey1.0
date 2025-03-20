@@ -1,4 +1,4 @@
-@VoiceSurvey.API_HostAddress = http://localhost:5285
+@VoiceSurvey.API_HostAddress = http://localhost:5262
 
 GET {{VoiceSurvey.API_HostAddress}}/weatherforecast/
 Accept: application/json
