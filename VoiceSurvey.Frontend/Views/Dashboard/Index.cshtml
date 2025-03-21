@@ -4,203 +4,186 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true"/>
-    <title>Dashboard</title>
+    <title>SurveyApp - Creator Dashboard</title>
+    <link rel="stylesheet" href="~/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><svg class="menu" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <p class="itm-1">SurveyApp</p>
-                <li tabindex="0">
-                    <a href="../Home/Index">
-                        <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm0-80h400v-400H120v400Zm560 80v-560h80v560h-80Zm160 0v-560h80v560h-80Zm-720-80v-400 400Z"/></svg>
-                        Home
-                    </a>
-                </li>
-                    <li tabindex="0">
-                        <a href="../Dashboard/Index">
-                            <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm0-80h400v-400H120v400Zm560 80v-560h80v560h-80Zm160 0v-560h80v560h-80Zm-720-80v-400 400Z"/></svg>
-                            General info
-                        </a>
-                    </li>
-                    <li tabindex="0">
-                        <a href="../Dashboard/Surveylist">
-                            <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-120q-33 0-56.5-23.5T80-200v-560q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v560q0 33-23.5 56.5T800-120H160Zm0-80h640v-560H160v560Zm40-80h200v-80H200v80Zm382-80 198-198-57-57-141 142-57-57-56 57 113 113Zm-382-80h200v-80H200v80Zm0-160h200v-80H200v80Zm-40 400v-560 560Z"/></svg>
-                            Surveys
-                        </a>
-                    </li>
-                    <li tabindex="0">
-                        <a href="#">
-                            <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q97-30 162-118.5T718-480H480v-315l-240 90v207q0 7 2 18h238v316Z"/></svg>
-                            Security
-                        </a>
-                    </li>
-                    <li tabindex="0">
-                        <a href="../About/Index">
-                            <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>
-                            About Us
-                        </a>
-                    </li>
-                    <li tabindex="0">
-                        <a href="#">
-                            <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>
-                            Contact Us
-                        </a>
-                    </li>
-                    <li tabindex="0">
-                        <a href="../Login/Index">
-                            <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>
-                            Logout
-                        </a>
-                    </li>
-
-                <div class="cont-us">
-                    <h6>Have any problem with how to manage your dashboard?</h6>
-                    <div>Contact Us</div>
+    <!-- Top Navbar -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="#" class="logo">SurveyApp</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" onclick="showSection('surveys')">Surveys</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="account-dropdown">
+                <span class="account-name" onclick="toggleAccountDropdown()">John Doe <i class="fas fa-caret-down"></i></span>
+                <div class="dropdown-menu" id="account-dropdown">
+                    <a href="#" onclick="showSection('account')">Account</a>
+                    <a href="#">Logout</a>
                 </div>
-
-        </ul>
-        <ul class="header">
-            <li class="appname" ><a href="../Home/Index">SurveyApp</a></li>
-            <li class="hideOnMobile"><a href="../About/Index">About</a></li>
-            <li class="hideOnMobile"><a href="#">Contact</a></li>
-            <li class="hideOnMobile"><a href="../Dashboard/Surveylist">Survey</a></li>
-            <li class="hideOnMobile"><a href="../Dashboard/Index">Dashboard</a></li>
-
-            <li class="menu-btn" onclick=showSidebar()>
-                <a href="#">
-                    <svg class="menu" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-                </a>
-            </li>
-            
-        </ul> 
-        <ul class="logging-btns hideOnMobile">
-            <li class=" hideOnLogin"><a href="../Login/Index">Login</a></li>
-        </ul>
+            </div>
+            <div class="menu-btn" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </nav>
 
-    <div class="dashboard">
-        <div class="panel hideOnMobile">
-            <p class="item-1">SurveyApp</p>
-            <ul>
-                <li tabindex="0">
-                    <a href="#">
-                        <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm0-80h400v-400H120v400Zm560 80v-560h80v560h-80Zm160 0v-560h80v560h-80Zm-720-80v-400 400Z"/></svg>
-                        General info
-                    </a>
-                </li>
-                <li tabindex="0">
-                    <a href="../Dashboard/Surveylist">
-                        <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-120q-33 0-56.5-23.5T80-200v-560q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v560q0 33-23.5 56.5T800-120H160Zm0-80h640v-560H160v560Zm40-80h200v-80H200v80Zm382-80 198-198-57-57-141 142-57-57-56 57 113 113Zm-382-80h200v-80H200v80Zm0-160h200v-80H200v80Zm-40 400v-560 560Z"/></svg>
-                        Surveys
-                    </a>
-                </li>
-                <li tabindex="0">
-                    <a href="#">
-                        <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q97-30 162-118.5T718-480H480v-315l-240 90v207q0 7 2 18h238v316Z"/></svg>
-                        Security
-                    </a>
-                </li>
-                <li tabindex="0">
-                    <a href="../Login/Index">
-                        <svg class="icons" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>
-                        Logout
-                    </a>
-                </li>
-            </ul>
-            <div class="contact-us">
-                <h6>Have any problem with how to manage your dashboard?</h6>
-                <div>Contact Us</div>
-            </div>
+    <!-- Sidebar (Mobile) -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">SurveyApp</a>
+            <i class="fas fa-times" onclick="toggleSidebar()"></i>
         </div>
-        <div class="details">
-            <div class="welcome">
-                <div class="wlc">
-                    <p>Welcome Back,</p>
-                    <h1>John Doe</h1>
-                </div>
-                <a href="#">
-                    <svg class="notification" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
-                </a>
-         </div>
-         <div class="info">
-            <div class="container">
-                <div class="detail">First name</div>
-                <div class="response">John</div>
-                <div class="detail">Last name</div>
-                <div class="response">Doe</div>
-                <div class="detail">Date of birth</div>
-                <div class="response">5-11-2024</div>
-                <div class="detail">Gender</div>
-                <div class="response">Male</div>
-                <div class="detail">Country</div>
-                <div class="response">Ghana</div>
-                <div class="detail">Language</div>
-                <div class="response">English</div>
-                <div class="detail">Mobile number(with country code)</div>
-                <div class="response">+233xxxxxxxxx</div>
-            </div>
-
-            <div class="edit">Edit</div>
-         </div>
-        </div>
-
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" onclick="showSection('surveys')">Surveys</a></li>
+            <li><a href="#" onclick="showSection('account')">Account</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
     </div>
 
-    <script>
-        function showSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'flex';
+    <!-- Main Content -->
+    <div class="dashboard-content">
+        <!-- Surveys Section (Default) -->
+        <section id="surveys" class="content-section active">
+            <h1>Manage Surveys</h1>
+            <button class="create-btn" onclick="createSurvey()">Create New Survey</button>
+            <div class="surveys-grid">
+                <div class="survey-card">
+                    <h2>Employee Satisfaction</h2>
+                    <p><strong>Status:</strong> Active</p>
+                    <p><strong>Responses:</strong> 15</p>
+                    <p><strong>Created:</strong> Mar 18, 2025</p>
+                    <div class="survey-actions">
+                        <button class="action-btn view-btn" onclick="viewSurvey('employee-satisfaction')">View Responses</button>
+                        <button class="action-btn edit-btn" onclick="editSurvey('employee-satisfaction')">Edit</button>
+                        <button class="action-btn delete-btn" onclick="deleteSurvey('employee-satisfaction')">Delete</button>
+                    </div>
+                </div>
+                <div class="survey-card">
+                    <h2>Market Research</h2>
+                    <p><strong>Status:</strong> Draft</p>
+                    <p><strong>Responses:</strong> 0</p>
+                    <p><strong>Created:</strong> Mar 20, 2025</p>
+                    <div class="survey-actions">
+                        <button class="action-btn view-btn" onclick="viewSurvey('market-research')">Preview</button>
+                        <button class="action-btn edit-btn" onclick="editSurvey('market-research')">Edit</button>
+                        <button class="action-btn delete-btn" onclick="deleteSurvey('market-research')">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    // Add event listener to close sidebar when clicking outside of it
-    document.addEventListener('click', closeSidebarOnClickOutside);
+        <!-- Account Section -->
+        <section id="account" class="content-section">
+            <h1>Account</h1>
+            <div class="account-card">
+                <div id="account-view" class="account-view">
+                    <h2>Your Details</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>First Name</label>
+                            <p>John</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Last Name</label>
+                            <p>Doe</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Email</label>
+                            <p>johndoe@example.com</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone Number</label>
+                            <p>+233xxxxxxxxx</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Date of Birth</label>
+                            <p>1990-11-05</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Gender</label>
+                            <p>Male</p>
+                        </div>
+                    </div>
+                    <button class="edit-btn" onclick="editAccount()">Edit Details</button>
+                    <div class="security-settings">
+                        <h2>Security</h2>
+                        <div class="info-item">
+                            <label>Password</label>
+                            <button class="change-password-btn" onclick="changePassword()">Change Password</button>
+                        </div>
+                        <div class="info-item">
+                            <label>Delete Account</label>
+                            <button class="delete-btn" onclick="deleteAccount()">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="account-edit" class="account-edit hidden">
+                    <h2>Edit Details</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>First Name</label>
+                            <input type="text" value="John">
+                        </div>
+                        <div class="info-item">
+                            <label>Last Name</label>
+                            <input type="text" value="Doe">
+                        </div>
+                        <div class="info-item">
+                            <label>Email</label>
+                            <input type="email" value="johndoe@example.com" disabled>
+                            <button class="verify-btn" onclick="verifyEmail()">Verify</button>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone Number</label>
+                            <input type="tel" value="+233xxxxxxxxx">
+                        </div>
+                        <div class="info-item">
+                            <label>Date of Birth</label>
+                            <input type="date" value="1990-11-05">
+                        </div>
+                        <div class="info-item">
+                            <label>Gender</label>
+                            <select>
+                                <option value="male" selected>Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="save-btn" onclick="saveAccount()">Save Changes</button>
+                    <button class="cancel-btn" onclick="cancelEdit()">Cancel</button>
+                </div>
+            </div>
+        </section>
+    </div>
 
-    // Prevent the click event on the button from propagating
-    const button = document.querySelector('.menu-btn');
-    button.addEventListener('click', stopPropagation);
-}
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-message"></p>
+            <div class="modal-actions">
+                <button class="modal-btn confirm-btn" id="modal-confirm"></button>
+                <button class="modal-btn cancel-btn" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
 
-function closeSidebarOnClickOutside(event) {
-    const sidebar = document.querySelector('.sidebar');
+    <!-- Toaster Container -->
+    <div class="toaster-container" id="toaster-container"></div>
 
-    if (!sidebar.contains(event.target)) {
-        sidebar.style.display = 'none';
-        // Remove the event listener after hiding the sidebar
-        document.removeEventListener('click', closeSidebarOnClickOutside);
-    }
-}
-
-function stopPropagation(event) {
-    event.stopPropagation();
-}
-
-        function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
-        function showSubmenu() {
-            const submenu = document.querySelector('.sub-menu');
-            const smul = document.querySelector('.sm-ul');
-            submenu.style.display = 'block';
-            smul.style.display = 'block';
-
-            // Add event listener to document to close submenu when clicking outside of it
-            document.addEventListener('click', closeSubmenuOnClickOutside);
-        }
-
-        function closeSubmenuOnClickOutside(event) {
-            const submenu = document.querySelector('.sub-menu');
-            const button = document.querySelector('.profile-icon');
-
-            // Check if the click target is not within the submenu or the button
-            if (!submenu.contains(event.target) && event.target !== button) {
-               submenu.style.display = 'none';
-               // Remove the event listener after hiding the submenu
-               document.removeEventListener('click', closeSubmenuOnClickOutside);
-            }
-        }
-
-    </script>
+    <script src="~/js/dashboard.js"></script>
 </body>
 </html>

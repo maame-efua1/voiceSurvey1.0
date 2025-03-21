@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zb75dThvNyykKxtip7b9XaOA9iLOojPRu2tH82VEVjQ=",
+  "Hash": "PDE2stIluj2FJ/GY1DC6z6/xkuwvLADHStl8OgobhKA=",
   "Source": "VoiceSurvey.Frontend",
   "BasePath": "_content/VoiceSurvey.Frontend",
   "Mode": "Default",
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wfmjpxgka8",
-      "Integrity": "pCo6QDOC0USGFvoho4IgL8UzRwFIwt+jEthgxz9wzs8=",
+      "Fingerprint": "4sacshfsa4",
+      "Integrity": "bM6JahAVK+O6dog5o3v+NoBzneBxMPsqbQ5Ef6pT6gs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\dashboard.css"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u49xcogihf",
-      "Integrity": "fhip6d7ajqhOEw6snyVW8JLKJkFlbg7u6wvNYYXMNS4=",
+      "Fingerprint": "2fp29bt8fo",
+      "Integrity": "0o0c7O1b+/SX1VyQ3DQ7uOxsC1AF7v2PJusUGpg3UgU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\home.css"
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rrtryfi3lo",
-      "Integrity": "iVIGLL9YPqPX5+GxVoEsAiAnJelvd1ACxMGx6wVuL/E=",
+      "Fingerprint": "z8h9bvx86j",
+      "Integrity": "k5aPbwfs1JBDCeutCJqYtsXotXeJZh/SY7bNpXyYEKc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\register.css"
@@ -1571,6 +1571,27 @@
       "OriginalItemSpec": "wwwroot\\images\\team\\3.jpg"
     },
     {
+      "Identity": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\dashboard.js",
+      "SourceId": "VoiceSurvey.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\",
+      "BasePath": "_content/VoiceSurvey.Frontend",
+      "RelativePath": "js/dashboard#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h1bahqyr06",
+      "Integrity": "m3CnBdz0UNvqGqGthnRieaRW2O26j9A1fP8Q0ytlu1E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\dashboard.js"
+    },
+    {
       "Identity": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\home.js",
       "SourceId": "VoiceSurvey.Frontend",
       "SourceType": "Discovered",
@@ -1585,11 +1606,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "n9dlzki08p",
-      "Integrity": "aylg//kq0NRbEgVm9WQg2tNI5C9O/10+I0I2LfLQ8Ik=",
+      "Fingerprint": "fvq3ya4ofb",
+      "Integrity": "y7RB1wGeOA1m0Mfq6U4DptPyPBmahbPy4OFIGc/1HBc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\home.js"
+    },
+    {
+      "Identity": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\register.js",
+      "SourceId": "VoiceSurvey.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\",
+      "BasePath": "_content/VoiceSurvey.Frontend",
+      "RelativePath": "js/register#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4jghggw4tj",
+      "Integrity": "8L2kUHO/POcndrrCkb7+hc8odArqyGqyCtctT22iAkM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\register.js"
     }
   ],
   "Endpoints": [
@@ -1676,6 +1718,51 @@
       ]
     },
     {
+      "Route": "css/dashboard.4sacshfsa4.css",
+      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\dashboard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10887"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bM6JahAVK+O6dog5o3v+NoBzneBxMPsqbQ5Ef6pT6gs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 14:56:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4sacshfsa4"
+        },
+        {
+          "Name": "label",
+          "Value": "css/dashboard.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bM6JahAVK+O6dog5o3v+NoBzneBxMPsqbQ5Ef6pT6gs="
+        }
+      ]
+    },
+    {
       "Route": "css/dashboard.css",
       "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\dashboard.css",
       "Selectors": [],
@@ -1686,7 +1773,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7530"
+          "Value": "10887"
         },
         {
           "Name": "Content-Type",
@@ -1694,11 +1781,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pCo6QDOC0USGFvoho4IgL8UzRwFIwt+jEthgxz9wzs8=\""
+          "Value": "\"bM6JahAVK+O6dog5o3v+NoBzneBxMPsqbQ5Ef6pT6gs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 09:07:04 GMT"
+          "Value": "Fri, 21 Mar 2025 14:56:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1708,13 +1795,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pCo6QDOC0USGFvoho4IgL8UzRwFIwt+jEthgxz9wzs8="
+          "Value": "sha256-bM6JahAVK+O6dog5o3v+NoBzneBxMPsqbQ5Ef6pT6gs="
         }
       ]
     },
     {
-      "Route": "css/dashboard.wfmjpxgka8.css",
-      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\dashboard.css",
+      "Route": "css/home.2fp29bt8fo.css",
+      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\home.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1723,7 +1810,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7530"
+          "Value": "5255"
         },
         {
           "Name": "Content-Type",
@@ -1731,11 +1818,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pCo6QDOC0USGFvoho4IgL8UzRwFIwt+jEthgxz9wzs8=\""
+          "Value": "\"0o0c7O1b+/SX1VyQ3DQ7uOxsC1AF7v2PJusUGpg3UgU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 09:07:04 GMT"
+          "Value": "Fri, 21 Mar 2025 12:11:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1745,15 +1832,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wfmjpxgka8"
+          "Value": "2fp29bt8fo"
         },
         {
           "Name": "label",
-          "Value": "css/dashboard.css"
+          "Value": "css/home.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pCo6QDOC0USGFvoho4IgL8UzRwFIwt+jEthgxz9wzs8="
+          "Value": "sha256-0o0c7O1b+/SX1VyQ3DQ7uOxsC1AF7v2PJusUGpg3UgU="
         }
       ]
     },
@@ -1768,7 +1855,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "261845"
+          "Value": "5255"
         },
         {
           "Name": "Content-Type",
@@ -1776,11 +1863,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fhip6d7ajqhOEw6snyVW8JLKJkFlbg7u6wvNYYXMNS4=\""
+          "Value": "\"0o0c7O1b+/SX1VyQ3DQ7uOxsC1AF7v2PJusUGpg3UgU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 17:44:52 GMT"
+          "Value": "Fri, 21 Mar 2025 12:11:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1790,52 +1877,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fhip6d7ajqhOEw6snyVW8JLKJkFlbg7u6wvNYYXMNS4="
-        }
-      ]
-    },
-    {
-      "Route": "css/home.u49xcogihf.css",
-      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\home.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "261845"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fhip6d7ajqhOEw6snyVW8JLKJkFlbg7u6wvNYYXMNS4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 17:44:52 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "u49xcogihf"
-        },
-        {
-          "Name": "label",
-          "Value": "css/home.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-fhip6d7ajqhOEw6snyVW8JLKJkFlbg7u6wvNYYXMNS4="
+          "Value": "sha256-0o0c7O1b+/SX1VyQ3DQ7uOxsC1AF7v2PJusUGpg3UgU="
         }
       ]
     },
@@ -1932,7 +1974,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2247"
+          "Value": "3540"
         },
         {
           "Name": "Content-Type",
@@ -1940,11 +1982,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"iVIGLL9YPqPX5+GxVoEsAiAnJelvd1ACxMGx6wVuL/E=\""
+          "Value": "\"k5aPbwfs1JBDCeutCJqYtsXotXeJZh/SY7bNpXyYEKc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 09:07:04 GMT"
+          "Value": "Fri, 21 Mar 2025 13:30:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1954,12 +1996,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-iVIGLL9YPqPX5+GxVoEsAiAnJelvd1ACxMGx6wVuL/E="
+          "Value": "sha256-k5aPbwfs1JBDCeutCJqYtsXotXeJZh/SY7bNpXyYEKc="
         }
       ]
     },
     {
-      "Route": "css/register.rrtryfi3lo.css",
+      "Route": "css/register.z8h9bvx86j.css",
       "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\css\\register.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1969,7 +2011,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2247"
+          "Value": "3540"
         },
         {
           "Name": "Content-Type",
@@ -1977,11 +2019,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"iVIGLL9YPqPX5+GxVoEsAiAnJelvd1ACxMGx6wVuL/E=\""
+          "Value": "\"k5aPbwfs1JBDCeutCJqYtsXotXeJZh/SY7bNpXyYEKc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 09:07:04 GMT"
+          "Value": "Fri, 21 Mar 2025 13:30:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1991,7 +2033,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rrtryfi3lo"
+          "Value": "z8h9bvx86j"
         },
         {
           "Name": "label",
@@ -1999,7 +2041,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-iVIGLL9YPqPX5+GxVoEsAiAnJelvd1ACxMGx6wVuL/E="
+          "Value": "sha256-k5aPbwfs1JBDCeutCJqYtsXotXeJZh/SY7bNpXyYEKc="
         }
       ]
     },
@@ -7662,6 +7704,133 @@
       ]
     },
     {
+      "Route": "js/dashboard.h1bahqyr06.js",
+      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\dashboard.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4753"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3CnBdz0UNvqGqGthnRieaRW2O26j9A1fP8Q0ytlu1E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 14:56:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h1bahqyr06"
+        },
+        {
+          "Name": "label",
+          "Value": "js/dashboard.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3CnBdz0UNvqGqGthnRieaRW2O26j9A1fP8Q0ytlu1E="
+        }
+      ]
+    },
+    {
+      "Route": "js/dashboard.js",
+      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\dashboard.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4753"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3CnBdz0UNvqGqGthnRieaRW2O26j9A1fP8Q0ytlu1E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 14:56:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3CnBdz0UNvqGqGthnRieaRW2O26j9A1fP8Q0ytlu1E="
+        }
+      ]
+    },
+    {
+      "Route": "js/home.fvq3ya4ofb.js",
+      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\home.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "946"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y7RB1wGeOA1m0Mfq6U4DptPyPBmahbPy4OFIGc/1HBc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 11:57:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fvq3ya4ofb"
+        },
+        {
+          "Name": "label",
+          "Value": "js/home.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y7RB1wGeOA1m0Mfq6U4DptPyPBmahbPy4OFIGc/1HBc="
+        }
+      ]
+    },
+    {
       "Route": "js/home.js",
       "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\home.js",
       "Selectors": [],
@@ -7672,7 +7841,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1708"
+          "Value": "946"
         },
         {
           "Name": "Content-Type",
@@ -7680,11 +7849,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"aylg//kq0NRbEgVm9WQg2tNI5C9O/10+I0I2LfLQ8Ik=\""
+          "Value": "\"y7RB1wGeOA1m0Mfq6U4DptPyPBmahbPy4OFIGc/1HBc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 16:01:40 GMT"
+          "Value": "Fri, 21 Mar 2025 11:57:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7694,13 +7863,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-aylg//kq0NRbEgVm9WQg2tNI5C9O/10+I0I2LfLQ8Ik="
+          "Value": "sha256-y7RB1wGeOA1m0Mfq6U4DptPyPBmahbPy4OFIGc/1HBc="
         }
       ]
     },
     {
-      "Route": "js/home.n9dlzki08p.js",
-      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\home.js",
+      "Route": "js/register.4jghggw4tj.js",
+      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\register.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7709,7 +7878,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1708"
+          "Value": "1564"
         },
         {
           "Name": "Content-Type",
@@ -7717,11 +7886,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"aylg//kq0NRbEgVm9WQg2tNI5C9O/10+I0I2LfLQ8Ik=\""
+          "Value": "\"8L2kUHO/POcndrrCkb7+hc8odArqyGqyCtctT22iAkM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 16:01:40 GMT"
+          "Value": "Fri, 21 Mar 2025 13:25:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7731,15 +7900,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n9dlzki08p"
+          "Value": "4jghggw4tj"
         },
         {
           "Name": "label",
-          "Value": "js/home.js"
+          "Value": "js/register.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-aylg//kq0NRbEgVm9WQg2tNI5C9O/10+I0I2LfLQ8Ik="
+          "Value": "sha256-8L2kUHO/POcndrrCkb7+hc8odArqyGqyCtctT22iAkM="
+        }
+      ]
+    },
+    {
+      "Route": "js/register.js",
+      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\register.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8L2kUHO/POcndrrCkb7+hc8odArqyGqyCtctT22iAkM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 13:25:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8L2kUHO/POcndrrCkb7+hc8odArqyGqyCtctT22iAkM="
         }
       ]
     }
