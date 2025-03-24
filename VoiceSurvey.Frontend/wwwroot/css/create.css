@@ -58,19 +58,11 @@ body {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Survey Container */
-.survey-container {
+/* Create Survey Container */
+.create-survey-container {
     max-width: 800px;
     margin: clamp(80px, 12vh, 100px) auto 2rem;
     padding: 0 2vw;
-}
-
-.section {
-    display: none;
-}
-
-.section.active {
-    display: block;
 }
 
 h1 {
@@ -86,49 +78,19 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Intro Card */
-.intro-card {
-    background: white;
-    border-radius: 15px;
-    padding: clamp(1.5rem, 3vw, 2rem);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.intro-card p {
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
-    color: #666;
-    margin-bottom: 1.5rem;
-}
-
-.next-btn {
-    background: #0090d4;
-    color: white;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    transition: background 0.3s;
-}
-
-.next-btn:hover {
-    background: #007bb5;
-}
-
-/* Survey Form */
-#survey-response-form {
+/* Form Styles */
+form {
     background: white;
     border-radius: 15px;
     padding: clamp(1.5rem, 3vw, 2rem);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.question-card {
+.form-group {
     margin-bottom: 1.5rem;
 }
 
-.question-card label {
+.form-group label {
     display: block;
     font-size: clamp(0.9rem, 1.5vw, 1rem);
     font-weight: 500;
@@ -136,8 +98,10 @@ h2 {
     color: #333;
 }
 
-.question-card textarea,
-.question-card input[type="radio"] {
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
@@ -147,32 +111,142 @@ h2 {
     transition: border-color 0.3s;
 }
 
-.question-card textarea {
+.form-group textarea {
     resize: vertical;
     min-height: 100px;
 }
 
-.question-card textarea:focus {
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     border-color: #0090d4;
 }
 
-.radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.form-group select[multiple] {
+    height: 120px;
 }
 
-.radio-option {
+.form-group small {
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    color: #666;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Range Inputs */
+.range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.range-inputs span {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #666;
+}
+
+.range-inputs input {
+    width: 100px;
+}
+
+/* Questions Section */
+.questions-section {
+    margin-bottom: 2rem;
+}
+
+.question-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.question-card input[type="text"] {
+    margin-bottom: 0.75rem;
+}
+
+.question-card select {
+    width: 200px;
+    margin-bottom: 0.75rem;
+}
+
+.options-container {
+    margin-top: 0.75rem;
+}
+
+.option-input {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.radio-option input[type="radio"] {
-    width: auto;
-    margin: 0;
+.option-input input {
+    flex: 1;
 }
 
+.remove-option-btn,
+.remove-question-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.remove-option-btn:hover,
+.remove-question-btn:hover {
+    background: #c82333;
+}
+
+.remove-question-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.add-option-btn {
+    background: #28a745;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    transition: background 0.3s;
+}
+
+.add-option-btn:hover {
+    background: #218838;
+}
+
+.add-question-btn {
+    background: #0090d4;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s;
+}
+
+.add-question-btn:hover {
+    background: #007bb5;
+}
+
+/* Submit Button */
 .submit-btn {
     background: #0090d4;
     color: white;
@@ -221,8 +295,25 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .survey-container {
+    .create-survey-container {
         padding: 0 1rem;
+    }
+
+    .range-inputs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .range-inputs input {
+        width: 100%;
+    }
+
+    .question-card select {
+        width: 100%;
+    }
+
+    .add-question-btn {
+        width: 100%;
     }
 }
 
@@ -231,13 +322,13 @@ h2 {
         font-size: clamp(1.5rem, 5vw, 2rem);
     }
 
-    .intro-card p,
-    .question-card label,
-    .question-card textarea {
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group select,
+    .form-group textarea {
         font-size: clamp(0.8rem, 1.2vw, 0.9rem);
     }
 
-    .next-btn,
     .submit-btn {
         font-size: clamp(0.9rem, 1.2vw, 1rem);
     }

@@ -7,6 +7,16 @@ public class DashboardController : Controller
         return View();
     }
 
+    public IActionResult Index1()
+    {
+        return View();
+    }
+
+    public IActionResult Index2()
+    {
+        return View();
+    }
+
     public IActionResult Surveylist()
     {
         return View();

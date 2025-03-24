@@ -6,105 +6,103 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1e90ff, #104e8b);
+    background: linear-gradient(135deg, #f0f4ff, #e6ffed);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
 }
 
 .container {
-    position: relative;
+    max-width: 900px;
+    padding: 2rem;
     width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .form-box {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 150%;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
     max-width: 400px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    position: absolute;
+    margin: 0 auto;
 }
 
-.form-box.hidden {
-    transform: translateX(120%);
-    opacity: 0;
+.hidden {
+    display: none;
 }
 
-.form-box:not(.hidden) {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.form-box h2 {
-    font-size: 2rem;
-    color: #1e90ff;
+h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: #0090d4;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .input-group label {
     display: block;
-    font-size: 0.9rem;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
     color: #333;
-    margin-bottom: 5px;
 }
 
 .input-group input,
 .input-group select {
     width: 100%;
-    padding: 12px;
+    padding: 0.75rem;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
     outline: none;
     transition: border-color 0.3s;
 }
 
 .input-group input:focus,
 .input-group select:focus {
-    border-color: #1e90ff;
+    border-color: #0090d4;
 }
 
 .btn {
-    width: 100%;
-    background: #1e90ff;
+    background: #0090d4;
     color: white;
+    padding: 0.75rem;
     border: none;
-    padding: 12px;
-    font-size: 1.1rem;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    width: 100%;
+    transition: background 0.3s;
 }
 
 .btn:hover {
-    background: #104e8b;
-    transform: translateY(-3px);
+    background: #007bb5;
+}
+
+.next-btn,
+.back-btn {
+    background: #6c757d;
+}
+
+.next-btn:hover,
+.back-btn:hover {
+    background: #5a6268;
 }
 
 .toggle-text {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
     color: #666;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .toggle-text span {
-    color: #1e90ff;
+    color: #0090d4;
     cursor: pointer;
     font-weight: 500;
 }
@@ -113,87 +111,65 @@ body {
     text-decoration: underline;
 }
 
+.forgot-password {
+    color: #dc3545;
+}
+
 .form-columns {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
 .column {
     flex: 1;
-    min-width: 0; /* Prevents overflow */
+    min-width: 0;
+}
+
+/* Signup Steps */
+.signup-step {
+    display: none;
+}
+
+.signup-step.active {
+    display: block;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button-group .btn {
+    flex: 1;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .form-box {
+        max-width: 100%;
+    }
+
     .form-columns {
         flex-direction: column;
-        gap: 0;
-    }
-    
-    .column {
-        width: 100%;
-    }
-    
-    .form-box {
-        padding: 30px;
-        max-width: 350px;
-    }
-    
-    .form-box h2 {
-        font-size: 1.8rem;
-    }
-    
-    .input-group input,
-    .input-group select {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-    
-    .btn {
-        padding: 10px;
-        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .form-box {
-        padding: 20px;
-        max-width: 300px;
+    h2 {
+        font-size: clamp(1.2rem, 2vw, 1.5rem);
     }
-    
-    .form-box h2 {
-        font-size: 1.5rem;
-    }
-    
-    .input-group label {
-        font-size: 0.8rem;
-    }
-    
-    .input-group input,
-    .input-group select {
-        padding: 8px;
-        font-size: 0.85rem;
-    }
-    
-    .btn {
-        padding: 8px;
-        font-size: 0.9rem;
-    }
-    
-    .toggle-text {
-        font-size: 0.8rem;
-    }
-}
 
-@media (min-width: 769px) {
-    .form-box#signup-box {
-        max-width: 600px; /* Increased width for signup form with two columns */
-    }
-    
+    .input-group label,
     .input-group input,
-    .input-group select {
-        font-size: 0.95rem;
+    .input-group select,
+    .btn,
+    .toggle-text {
+        font-size: clamp(0.8rem, 1vw, 0.9rem);
     }
 }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SurveyApp - Creator Dashboard</title>
-    <link rel="stylesheet" href="~/css/dashboard.css">
+    <title>SurveyApp - Responder Dashboard</title>
+    <link rel="stylesheet" href="~/css/dashboard1.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
         </div>
         <div class="nav-right">
             <div class="account-dropdown">
-                <span class="account-name" onclick="toggleAccountDropdown()">John Doe <i class="fas fa-caret-down"></i></span>
+                <span class="account-name" onclick="toggleAccountDropdown()">Jane Doe <i class="fas fa-caret-down"></i></span>
                 <div class="dropdown-menu" id="account-dropdown">
                     <a href="#" onclick="showSection('surveys')">Surveys</a>
                     <a href="#" onclick="showSection('account')">Account</a>
@@ -31,29 +31,40 @@
     <div class="dashboard-content">
         <!-- Surveys Section (Default) -->
         <section id="surveys" class="content-section active">
-            <h1>Manage Surveys</h1>
-            <button class="create-btn" onclick="createSurvey()">Create New Survey</button>
+            <h1>Your Surveys</h1>
+
+            <!-- Participated Surveys -->
+            <h2>Participated Surveys</h2>
             <div class="surveys-grid">
                 <div class="survey-card">
-                    <h2>Employee Satisfaction</h2>
-                    <p><strong>Status:</strong> Active</p>
-                    <p><strong>Responses:</strong> 15</p>
-                    <p><strong>Created:</strong> Mar 18, 2025</p>
+                    <h3>Employee Satisfaction</h3>
+                    <p><strong>Date:</strong> Mar 19, 2025</p>
                     <div class="survey-actions">
-                        <button class="action-btn view-btn" onclick="viewSurvey('employee-satisfaction')">View Responses</button>
-                        <button class="action-btn edit-btn" onclick="editSurvey('employee-satisfaction')">Edit</button>
-                        <button class="action-btn delete-btn" onclick="deleteSurvey('employee-satisfaction')">Delete</button>
+                        <button class="action-btn view-btn" onclick="viewSurvey('employee-satisfaction')">View</button>
                     </div>
                 </div>
                 <div class="survey-card">
-                    <h2>Market Research</h2>
-                    <p><strong>Status:</strong> Draft</p>
-                    <p><strong>Responses:</strong> 0</p>
-                    <p><strong>Created:</strong> Mar 20, 2025</p>
+                    <h3>Customer Feedback</h3>
+                    <p><strong>Date:</strong> Mar 22, 2025</p>
                     <div class="survey-actions">
-                        <button class="action-btn view-btn" onclick="viewSurvey('market-research')">Preview</button>
-                        <button class="action-btn edit-btn" onclick="editSurvey('market-research')">Edit</button>
-                        <button class="action-btn delete-btn" onclick="deleteSurvey('market-research')">Delete</button>
+                        <button class="action-btn view-btn" onclick="viewSurvey('customer-feedback')">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Available Surveys -->
+            <h2>Available Surveys</h2>
+            <div class="surveys-grid">
+                <div class="survey-card">
+                    <h3>Market Research</h3>
+                    <div class="survey-actions">
+                        <button class="action-btn participate-btn" onclick="participateSurvey('market-research')">Participate</button>
+                    </div>
+                </div>
+                <div class="survey-card">
+                    <h3>Product Preferences</h3>
+                    <div class="survey-actions">
+                        <button class="action-btn participate-btn" onclick="participateSurvey('product-preferences')">Participate</button>
                     </div>
                 </div>
             </div>
@@ -68,7 +79,7 @@
                     <div class="info-grid">
                         <div class="info-item">
                             <label>First Name</label>
-                            <p>John</p>
+                            <p>Jane</p>
                         </div>
                         <div class="info-item">
                             <label>Last Name</label>
@@ -76,7 +87,7 @@
                         </div>
                         <div class="info-item">
                             <label>Email</label>
-                            <p>johndoe@example.com</p>
+                            <p>janedoe@example.com</p>
                         </div>
                         <div class="info-item">
                             <label>Phone Number</label>
@@ -84,11 +95,11 @@
                         </div>
                         <div class="info-item">
                             <label>Date of Birth</label>
-                            <p>1990-11-05</p>
+                            <p>1992-03-15</p>
                         </div>
                         <div class="info-item">
                             <label>Gender</label>
-                            <p>Male</p>
+                            <p>Female</p>
                         </div>
                     </div>
                     <button class="edit-btn" onclick="editAccount()">Edit Details</button>
@@ -109,7 +120,7 @@
                     <div class="info-grid">
                         <div class="info-item">
                             <label>First Name</label>
-                            <input type="text" value="John">
+                            <input type="text" value="Jane">
                         </div>
                         <div class="info-item">
                             <label>Last Name</label>
@@ -117,7 +128,7 @@
                         </div>
                         <div class="info-item">
                             <label>Email</label>
-                            <input type="email" value="johndoe@example.com" disabled>
+                            <input type="email" value="janedoe@example.com" disabled>
                             <button class="verify-btn" onclick="verifyEmail()">Verify</button>
                         </div>
                         <div class="info-item">
@@ -126,13 +137,13 @@
                         </div>
                         <div class="info-item">
                             <label>Date of Birth</label>
-                            <input type="date" value="1990-11-05">
+                            <input type="date" value="1992-03-15">
                         </div>
                         <div class="info-item">
                             <label>Gender</label>
                             <select>
-                                <option value="male" selected>Male</option>
-                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="female" selected>Female</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -160,6 +171,6 @@
     <!-- Toaster Container -->
     <div class="toaster-container" id="toaster-container"></div>
 
-    <script src="~/js/dashboard.js"></script>
+    <script src="~/js/dashboard1.js"></script>
 </body>
 </html>

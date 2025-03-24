@@ -12,7 +12,7 @@
         <!-- Login Form -->
         <div class="form-box" id="login-box">
             <h2>Login</h2>
-            <form id="login-form">
+            <form id="login-form" onsubmit="login(event)">
                 <div class="input-group">
                     <label for="login-email">Email</label>
                     <input type="email" id="login-email" placeholder="Enter your email" required>
@@ -22,52 +22,96 @@
                     <input type="password" id="login-password" placeholder="Enter your password" required>
                 </div>
                 <button type="submit" class="btn">Login</button>
-                <p class="toggle-text">Don't have an account? <span onclick="toggleForm()">Sign Up</span></p>
+                <p class="toggle-text">
+                    <span class="forgot-password" onclick="toggleForgotPassword()">Forgot Password?</span> | 
+                    Don't have an account? <span onclick="toggleForm('signup')">Sign Up</span>
+                </p>
+            </form>
+        </div>
+
+        <!-- Forgot Password Form -->
+        <div class="form-box hidden" id="forgot-password-box">
+            <h2>Forgot Password</h2>
+            <form id="forgot-password-form" onsubmit="resetPassword(event)">
+                <div class="input-group">
+                    <label for="forgot-email">Email</label>
+                    <input type="email" id="forgot-email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn">Reset Password</button>
+                <p class="toggle-text">Back to <span onclick="toggleForgotPassword()">Login</span></p>
             </form>
         </div>
 
         <!-- Sign Up Form -->
         <div class="form-box hidden" id="signup-box">
             <h2>Sign Up</h2>
-            <form id="signup-form">
-                <div class="form-columns">
-                    <div class="column">
-                        <div class="input-group">
-                            <label for="signup-fullname">Fullname </label>
-                            <input type="text" id="signup-fullname" placeholder="Enter your fullname" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="signup-phone">Phone Number</label>
-                            <input type="tel" id="signup-phone" placeholder="Enter your phone number" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="signup-email">Email</label>
-                            <input type="email" id="signup-email" placeholder="Enter your email" required>
-                        </div>
+            <form id="signup-form" onsubmit="signup(event)">
+                <!-- Step 1 -->
+                <div class="signup-step active" id="signup-step-1">
+                    <div class="input-group">
+                        <label for="signup-firstname">First Name</label>
+                        <input type="text" id="signup-firstname" placeholder="Enter your first name" required>
                     </div>
-                    <div class="column">
-                        <div class="input-group">
-                            <label for="signup-username">Username</label>
-                            <input type="text" id="signup-username" placeholder="Choose a username" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="signup-gender">Gender</label>
-                            <select id="signup-gender" required>
-                                <option value="" disabled selected>Select your gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="input-group">
-                            <label for="signup-password">Password</label>
-                            <input type="password" id="signup-password" placeholder="Create a password" required>
-                        </div>
+                    <div class="input-group">
+                        <label for="signup-lastname">Last Name</label>
+                        <input type="text" id="signup-lastname" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" placeholder="Choose a username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="button" class="btn next-btn" onclick="nextStep()">Next</button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="signup-step" id="signup-step-2">
+                    <div class="input-group">
+                        <label for="signup-phone">Phone Number</label>
+                        <input type="tel" id="signup-phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-gender">Gender</label>
+                        <select id="signup-gender" required>
+                            <option value="" disabled selected>Select your gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-region">Region</label>
+                        <select id="signup-region" required>
+                            <option value="" disabled selected>Select your region</option>
+                            <option value="greater-accra">Greater Accra</option>
+                            <option value="ashanti">Ashanti</option>
+                            <option value="central">Central</option>
+                            <option value="eastern">Eastern</option>
+                            <option value="western">Western</option>
+                            <!-- Add more Ghana regions as needed -->
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-city">City</label>
+                        <input type="text" id="signup-city" placeholder="Enter your city" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-age">Age</label>
+                        <input type="number" id="signup-age" placeholder="Enter your age" min="1" max="120" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password" required>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn back-btn" onclick="prevStep()">Back</button>
+                        <button type="submit" class="btn">Sign Up</button>
                     </div>
                 </div>
-                <button type="submit" class="btn">Sign Up</button>
-                <p class="toggle-text">Already have an account? <span onclick="toggleForm()">Login</span></p>
+                <p class="toggle-text">Already have an account? <span onclick="toggleForm('login')">Login</span></p>
             </form>
         </div>
     </div>

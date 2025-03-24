@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VoiceSurvey.Frontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c527efb1574e7e701817aede78fd847a38bd16e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1be20e8318460127a1e35889220161ec1673a09")]
 [assembly: System.Reflection.AssemblyProductAttribute("VoiceSurvey.Frontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VoiceSurvey.Frontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

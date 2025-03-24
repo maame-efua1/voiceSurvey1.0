@@ -106,59 +106,223 @@ h1 {
     margin-bottom: clamp(1rem, 3vw, 2rem);
 }
 
-/* Surveys Section */
-.create-btn {
-    background: #28a745;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: clamp(0.9rem, 1.2vw, 1rem);
-    cursor: pointer;
-    margin-bottom: clamp(1rem, 2vw, 1.5rem);
-    transition: background 0.3s;
+h2 {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    color: #0090d4;
+    margin: 1.5rem 0 1rem;
 }
 
-.create-btn:hover {
-    background: #218838;
-}
-
-.surveys-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 30vw, 350px), 1fr));
-    gap: clamp(1rem, 2vw, 1.5rem);
-}
-
-.survey-card {
-    background: white;
-    border-radius: 15px;
-    padding: clamp(1rem, 2vw, 1.5rem);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.survey-card:hover {
-    transform: translateY(-5px);
-}
-
-.survey-card h2 {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+h3 {
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
     color: #0090d4;
     margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
 }
 
-.survey-card p {
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 25vw, 300px), 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #333;
     margin: 0.5rem 0;
 }
 
-.survey-actions {
+.stat-change {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    color: #666;
+}
+
+.stat-change i {
+    margin-right: 0.25rem;
+}
+
+.stat-change .fa-arrow-up {
+    color: #28a745;
+}
+
+.stat-change .fa-arrow-down {
+    color: #dc3545;
+}
+
+.stat-change .fa-exclamation-circle {
+    color: #ffc107;
+}
+
+/* Management Grid */
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 30vw, 350px), 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+.management-card {
+    background: white;
+    border-radius: 15px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.management-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: clamp(0.75rem, 1.5vw, 1rem);
 }
 
+/* Tab Styles */
+.tab-container {
+    margin-top: clamp(1rem, 2vw, 1.5rem);
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: #ddd;
+    color: #333;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.tab-btn.active {
+    background: #0090d4;
+    color: white;
+}
+
+.tab-btn:hover:not(.active) {
+    background: #ccc;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Table Styles (Surveys, Users, Logs) */
+.table-container {
+    background: white;
+    border-radius: 15px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.survey-table, .user-table, .log-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.survey-table th, .survey-table td,
+.user-table th, .user-table td,
+.log-table th, .log-table td {
+    padding: clamp(0.75rem, 1.5vw, 1rem);
+    text-align: left;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    border-bottom: 1px solid #ddd;
+}
+
+.survey-table th, .user-table th, .log-table th {
+    background: #0090d4;
+    color: white;
+    font-weight: 500;
+}
+
+.survey-table tr:hover, .user-table tr:hover, .log-table tr:hover {
+    background: #f5f5f5;
+}
+
+.survey-table td:last-child, .user-table td:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Search Container */
+.search-container {
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-container input:focus {
+    border-color: #0090d4;
+}
+
+/* View More Button */
+.view-more-btn {
+    background: #0090d4;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    transition: background 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-more-btn:hover {
+    background: #007bb5;
+}
+
+/* Filter Container */
+.filter-container {
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-container label {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-weight: 500;
+}
+
+.filter-container select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+/* Action Buttons */
 .action-btn {
     padding: 0.5rem 1rem;
     border: none;
@@ -166,7 +330,7 @@ h1 {
     cursor: pointer;
     font-size: clamp(0.8rem, 1vw, 0.9rem);
     transition: background 0.3s;
-    min-width: 80px; /* Ensures buttons aren’t too small */
+    min-width: 80px;
 }
 
 .view-btn {
@@ -187,6 +351,15 @@ h1 {
     background: #e0a800;
 }
 
+.approve-btn {
+    background: #28a745;
+    color: white;
+}
+
+.approve-btn:hover {
+    background: #218838;
+}
+
 .delete-btn {
     background: #dc3545;
     color: white;
@@ -194,6 +367,27 @@ h1 {
 
 .delete-btn:hover {
     background: #c82333;
+}
+
+/* Activity Log (Preview) */
+.log-container {
+    background: white;
+    border-radius: 15px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.log-list {
+    list-style: none;
+}
+
+.log-list li {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    margin: 0.75rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid #0090d4;
 }
 
 /* Account Section */
@@ -236,11 +430,11 @@ h1 {
     font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
-.info-item p, .info-item input, .info-item select {
+.info-item p, .info-item input {
     font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
-.info-item input, .info-item select {
+.info-item input {
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -415,7 +609,7 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .surveys-grid {
+    .stats-grid, .management-grid {
         grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 45vw, 300px), 1fr));
     }
 }
@@ -430,10 +624,10 @@ h1 {
     .dropdown-menu {
         width: clamp(100px, 25vw, 130px);
     }
-    .survey-card {
+    .management-card, .stat-card {
         padding: clamp(0.75rem, 1.5vw, 1rem);
     }
-    .survey-actions {
+    .management-actions {
         flex-direction: column;
         align-items: stretch;
     }
@@ -442,6 +636,22 @@ h1 {
     }
     .info-grid {
         grid-template-columns: 1fr;
+    }
+    .survey-table th, .survey-table td,
+    .user-table th, .user-table td,
+    .log-table th, .log-table td {
+        font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    }
+    .survey-table td:last-child, .user-table td:last-child {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .tab-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .tab-btn {
+        width: 100%;
     }
 }
 
@@ -452,15 +662,16 @@ h1 {
     h1 {
         font-size: clamp(1.5rem, 5vw, 2rem);
     }
-    .surveys-grid {
+    .stats-grid, .management-grid {
         grid-template-columns: 1fr;
     }
-    .survey-card h2 {
-        font-size: clamp(1rem, 2.5vw, 1.2rem);
-    }
-    .create-btn, .edit-btn, .save-btn, .cancel-btn, .verify-btn, .delete-btn, .change-password-btn {
+    .edit-btn, .save-btn, .cancel-btn, .verify-btn, .delete-btn, .change-password-btn {
         padding: 0.5rem 1rem;
         font-size: clamp(0.8rem, 1vw, 0.9rem);
+    }
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
@@ -468,7 +679,10 @@ h1 {
     .dashboard-content {
         max-width: 1200px;
     }
-    .surveys-grid {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .management-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }

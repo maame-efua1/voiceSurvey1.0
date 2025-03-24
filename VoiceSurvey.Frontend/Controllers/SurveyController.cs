@@ -6,4 +6,9 @@ public class SurveyController : Controller
     {
         return View();
     }
+
+    public IActionResult Create()
+    {
+        return View();
+    }
 }

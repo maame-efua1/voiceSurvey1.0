@@ -58,38 +58,18 @@ function showToaster(message, isError = false) {
     }, 3000);
 }
 
-// Create Survey
-function createSurvey() {
-    showToaster('Redirecting to survey creation page...');
-    // Simulate redirect or action
-    setTimeout(() => {}, 1000);
-}
-
-// View Survey Responses or Preview
+// View Participated Survey
 function viewSurvey(surveyId) {
-    showToaster(`Viewing ${surveyId} responses/preview...`);
+    showToaster(`Viewing ${surveyId}...`);
     // Simulate view action
     setTimeout(() => {}, 1000);
 }
 
-// Edit Survey
-function editSurvey(surveyId) {
-    showToaster(`Editing ${surveyId}...`);
-    // Simulate edit action
+// Participate in Survey
+function participateSurvey(surveyId) {
+    showToaster(`Redirecting to ${surveyId} participation...`);
+    // Simulate participation action
     setTimeout(() => {}, 1000);
-}
-
-// Delete Survey
-function deleteSurvey(surveyId) {
-    showModal(
-        'Confirm Deletion',
-        `Are you sure you want to delete ${surveyId}?`,
-        'Delete',
-        () => {
-            showToaster(`${surveyId} deleted successfully!`);
-            // Simulate delete action
-        }
-    );
 }
 
 // Edit Account

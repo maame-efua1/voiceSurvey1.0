@@ -106,23 +106,13 @@ h1 {
     margin-bottom: clamp(1rem, 3vw, 2rem);
 }
 
+h2 {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    color: #0090d4;
+    margin: 1.5rem 0 1rem;
+}
+
 /* Surveys Section */
-.create-btn {
-    background: #28a745;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: clamp(0.9rem, 1.2vw, 1rem);
-    cursor: pointer;
-    margin-bottom: clamp(1rem, 2vw, 1.5rem);
-    transition: background 0.3s;
-}
-
-.create-btn:hover {
-    background: #218838;
-}
-
 .surveys-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 30vw, 350px), 1fr));
@@ -141,8 +131,8 @@ h1 {
     transform: translateY(-5px);
 }
 
-.survey-card h2 {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+.survey-card h3 {
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
     color: #0090d4;
     margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
 }
@@ -166,7 +156,7 @@ h1 {
     cursor: pointer;
     font-size: clamp(0.8rem, 1vw, 0.9rem);
     transition: background 0.3s;
-    min-width: 80px; /* Ensures buttons aren’t too small */
+    min-width: 80px;
 }
 
 .view-btn {
@@ -178,22 +168,13 @@ h1 {
     background: #007bb5;
 }
 
-.edit-btn {
-    background: #ffc107;
-    color: #333;
-}
-
-.edit-btn:hover {
-    background: #e0a800;
-}
-
-.delete-btn {
-    background: #dc3545;
+.participate-btn {
+    background: #28a745;
     color: white;
 }
 
-.delete-btn:hover {
-    background: #c82333;
+.participate-btn:hover {
+    background: #218838;
 }
 
 /* Account Section */
@@ -455,10 +436,10 @@ h1 {
     .surveys-grid {
         grid-template-columns: 1fr;
     }
-    .survey-card h2 {
+    .survey-card h3 {
         font-size: clamp(1rem, 2.5vw, 1.2rem);
     }
-    .create-btn, .edit-btn, .save-btn, .cancel-btn, .verify-btn, .delete-btn, .change-password-btn {
+    .edit-btn, .save-btn, .cancel-btn, .verify-btn, .delete-btn, .change-password-btn {
         padding: 0.5rem 1rem;
         font-size: clamp(0.8rem, 1vw, 0.9rem);
     }

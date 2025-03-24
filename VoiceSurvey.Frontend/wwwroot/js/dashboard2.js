@@ -17,6 +17,17 @@ function toggleAccountDropdown(forceClose = false) {
     }
 }
 
+// Show Tab
+function showTab(tabId) {
+    // Deactivate all tabs and contents
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+    // Activate selected tab and content
+    document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
+
 // Modal Functions
 function showModal(title, message, confirmText, confirmCallback) {
     const modal = document.getElementById('modal');
@@ -58,25 +69,24 @@ function showToaster(message, isError = false) {
     }, 3000);
 }
 
-// Create Survey
-function createSurvey() {
-    showToaster('Redirecting to survey creation page...');
-    // Simulate redirect or action
-    setTimeout(() => {}, 1000);
-}
-
-// View Survey Responses or Preview
+// View Survey
 function viewSurvey(surveyId) {
-    showToaster(`Viewing ${surveyId} responses/preview...`);
+    showToaster(`Viewing ${surveyId} details...`);
     // Simulate view action
     setTimeout(() => {}, 1000);
 }
 
-// Edit Survey
-function editSurvey(surveyId) {
-    showToaster(`Editing ${surveyId}...`);
-    // Simulate edit action
-    setTimeout(() => {}, 1000);
+// Approve Survey
+function approveSurvey(surveyId) {
+    showModal(
+        'Confirm Approval',
+        `Are you sure you want to approve ${surveyId}?`,
+        'Approve',
+        () => {
+            showToaster(`${surveyId} approved successfully!`);
+            // Simulate approval action
+        }
+    );
 }
 
 // Delete Survey
@@ -90,6 +100,94 @@ function deleteSurvey(surveyId) {
             // Simulate delete action
         }
     );
+}
+
+// View Users (from Overview)
+function viewUsers(userType) {
+    showToaster(`Viewing ${userType} list...`);
+    showSection('users'); // Navigate to User Management page
+    document.getElementById('user-type-filter').value = userType; // Set filter
+    filterUsers(); // Apply filter
+}
+
+// Manage Users (from Overview)
+function manageUsers(userType) {
+    showToaster(`Managing ${userType}...`);
+    showSection('users'); // Navigate to User Management page
+    document.getElementById('user-type-filter').value = userType; // Set filter
+    filterUsers(); // Apply filter
+}
+
+// View User (from User Management)
+function viewUser(userId) {
+    showToaster(`Viewing ${userId} details...`);
+    // Simulate view action
+    setTimeout(() => {}, 1000);
+}
+
+// Edit User
+function editUser(userId) {
+    showToaster(`Editing ${userId}...`);
+    // Simulate edit action
+    setTimeout(() => {}, 1000);
+}
+
+// Delete User
+function deleteUser(userId) {
+    showModal(
+        'Confirm Deletion',
+        `Are you sure you want to delete user ${userId}?`,
+        'Delete',
+        () => {
+            showToaster(`User ${userId} deleted successfully!`);
+            // Simulate delete action
+        }
+    );
+}
+
+// Filter Users
+function filterUsers() {
+    const filterValue = document.getElementById('user-type-filter').value;
+    const rows = document.querySelectorAll('#user-table-body tr');
+    rows.forEach(row => {
+        const type = row.getAttribute('data-type');
+        if (filterValue === 'all' || type === filterValue) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+    // Re-apply search after filtering
+    searchTable('users-search', 'user-table');
+}
+
+// Search Table
+function searchTable(inputId, tableId) {
+    const searchValue = document.getElementById(inputId).value.toLowerCase();
+    const table = document.getElementById(tableId);
+    const rows = table.getElementsByTagName('tr');
+
+    for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        if (row.parentNode.tagName === 'TBODY') { // Only filter tbody rows
+            const cells = row.getElementsByTagName('td');
+            let rowText = '';
+            for (let j = 0; j < cells.length; j++) {
+                rowText += cells[j].textContent.toLowerCase() + ' ';
+            }
+            if (rowText.includes(searchValue)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    }
+}
+
+// View Full Activity Log
+function viewFullLog() {
+    showToaster('Viewing full activity log...');
+    showSection('logs'); // Navigate to Activity Log page
 }
 
 // Edit Account
@@ -133,7 +231,7 @@ function changePassword() {
 function deleteAccount() {
     showModal(
         'Confirm Account Deletion',
-        'Are you sure you want to delete your account? This action cannot be undone.',
+        'Are you sure you want to delete your admin account? This action cannot be undone.',
         'Delete',
         () => {
             showToaster('Account deleted successfully!', true);

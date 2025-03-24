@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyApp - Create Survey</title>
+    <link rel="stylesheet" href="~/css/create.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="#" class="logo">SurveyApp</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="back-btn" onclick="goBack()">Back to Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="create-survey-container">
+        <h1>Create a New Survey</h1>
+        <form id="survey-form" onsubmit="submitSurvey(event)">
+            <!-- Survey Topic -->
+            <div class="form-group">
+                <label for="survey-topic">Survey Topic</label>
+                <input type="text" id="survey-topic" placeholder="Enter survey topic" required>
+            </div>
+
+            <!-- Survey Description -->
+            <div class="form-group">
+                <label for="survey-description">Survey Description</label>
+                <textarea id="survey-description" placeholder="Describe your survey (optional)" rows="4"></textarea>
+            </div>
+
+            <!-- Questions Section -->
+            <div class="questions-section">
+                <h2>Questions</h2>
+                <div id="questions-container">
+                    <!-- Questions will be dynamically added here -->
+                </div>
+                <button type="button" class="add-question-btn" onclick="addQuestion()">
+                    <i class="fas fa-plus"></i> Add Question
+                </button>
+            </div>
+
+            <!-- Target Audience -->
+            <div class="target-audience-section">
+                <h2>Target Audience</h2>
+                <!-- Age Range -->
+                <div class="form-group">
+                    <label>Age Range</label>
+                    <div class="range-inputs">
+                        <input type="number" id="age-min" placeholder="Min Age" min="1" max="100" required>
+                        <span>to</span>
+                        <input type="number" id="age-max" placeholder="Max Age" min="1" max="100" required>
+                    </div>
+                </div>
+                <!-- Location -->
+                <div class="form-group">
+                    <label for="location">Target Location</label>
+                    <select id="location" multiple required>
+                        <option value="" disabled>Select locations</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>
+                        <option value="india">India</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <small>Hold Ctrl (or Cmd) to select multiple locations</small>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Create Survey</button>
+        </form>
+    </div>
+
+    <!-- Toaster Container -->
+    <div class="toaster-container" id="toaster-container"></div>
+
+    <script src="~/js/create.js"></script>
+</body>
+</html>

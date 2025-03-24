@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyApp - Admin Dashboard</title>
+    <link rel="stylesheet" href="~/css/dashboard2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="#" class="logo">SurveyApp</a>
+        </div>
+        <div class="nav-right">
+            <div class="account-dropdown">
+                <span class="account-name" onclick="toggleAccountDropdown()">Admin User <i class="fas fa-caret-down"></i></span>
+                <div class="dropdown-menu" id="account-dropdown">
+                    <a href="#" onclick="showSection('overview')">Overview</a>
+                    <a href="#" onclick="showSection('surveys')">Survey Management</a>
+                    <a href="#" onclick="showSection('users')">User Management</a>
+                    <a href="#" onclick="showSection('logs')">Activity Log</a>
+                    <a href="#" onclick="showSection('account')">Account</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="dashboard-content">
+        <!-- Admin Overview Section (Default) -->
+        <section id="overview" class="content-section active">
+            <h1>Admin Overview</h1>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p class="stat-value">1,245</p>
+                    <p class="stat-change"><i class="fas fa-arrow-up"></i> 5% from last month</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Surveys</h3>
+                    <p class="stat-value">87</p>
+                    <p class="stat-change"><i class="fas fa-arrow-down"></i> 2% from last week</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Responses</h3>
+                    <p class="stat-value">12,304</p>
+                    <p class="stat-change"><i class="fas fa-arrow-up"></i> 10% today</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Approvals</h3>
+                    <p class="stat-value">14</p>
+                    <p class="stat-change"><i class="fas fa-exclamation-circle"></i> Action required</p>
+                </div>
+            </div>
+
+            <!-- User Management -->
+            <h2>User Management</h2>
+            <div class="management-grid">
+                <div class="management-card">
+                    <h3>Creators</h3>
+                    <p><strong>Total:</strong> 320</p>
+                    <p><strong>Active:</strong> 295</p>
+                    <div class="management-actions">
+                        <button class="action-btn view-btn" onclick="viewUsers('creators')">View List</button>
+                        <button class="action-btn edit-btn" onclick="manageUsers('creators')">Manage</button>
+                    </div>
+                </div>
+                <div class="management-card">
+                    <h3>Responders</h3>
+                    <p><strong>Total:</strong> 925</p>
+                    <p><strong>Active:</strong> 870</p>
+                    <div class="management-actions">
+                        <button class="action-btn view-btn" onclick="viewUsers('responders')">View List</button>
+                        <button class="action-btn edit-btn" onclick="manageUsers('responders')">Manage</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Survey Management (Limited Table) -->
+            <h2>Survey Management</h2>
+            <div class="table-container">
+                <table class="survey-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Creator</th>
+                            <th>Status</th>
+                            <th>Responses</th>
+                            <th>Created</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Employee Satisfaction</td>
+                            <td>John Doe</td>
+                            <td>Active</td>
+                            <td>15</td>
+                            <td>Mar 18, 2025</td>
+                            <td>
+                                <button class="action-btn view-btn" onclick="viewSurvey('employee-satisfaction')">View</button>
+                                <button class="action-btn approve-btn" onclick="approveSurvey('employee-satisfaction')">Approve</button>
+                                <button class="action-btn delete-btn" onclick="deleteSurvey('employee-satisfaction')">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Market Research</td>
+                            <td>Jane Smith</td>
+                            <td>Pending</td>
+                            <td>0</td>
+                            <td>Mar 20, 2025</td>
+                            <td>
+                                <button class="action-btn view-btn" onclick="viewSurvey('market-research')">View</button>
+                                <button class="action-btn approve-btn" onclick="approveSurvey('market-research')">Approve</button>
+                                <button class="action-btn delete-btn" onclick="deleteSurvey('market-research')">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="view-more-btn" onclick="showSection('surveys')">View More</button>
+            </div>
+
+            <!-- Activity Log (Preview) -->
+            <h2>Activity Log</h2>
+            <div class="log-container">
+                <ul class="log-list">
+                    <li><strong>Mar 24, 2025 10:15 AM:</strong> User "John Doe" created survey "Employee Satisfaction"</li>
+                    <li><strong>Mar 24, 2025 9:50 AM:</strong> Admin approved survey "Customer Feedback"</li>
+                    <li><strong>Mar 23, 2025 3:20 PM:</strong> User "Jane Doe" completed survey "Product Preferences"</li>
+                    <li><strong>Mar 23, 2025 1:10 PM:</strong> New user "Mike Ross" registered as responder</li>
+                </ul>
+                <button class="action-btn view-btn" onclick="showSection('logs')">View Full Log</button>
+            </div>
+        </section>
+
+        <!-- Surveys Section (Tabbed Interface) -->
+        <section id="surveys" class="content-section">
+            <h1>Survey Management</h1>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="showTab('all-surveys')">All Surveys</button>
+                    <button class="tab-btn" onclick="showTab('pending-surveys')">Pending Approval</button>
+                </div>
+                <div class="tab-content active" id="all-surveys">
+                    <div class="search-container">
+                        <input type="text" id="all-surveys-search" placeholder="Search all surveys..." onkeyup="searchTable('all-surveys-search', 'all-surveys-table')">
+                    </div>
+                    <div class="table-container">
+                        <table class="survey-table" id="all-surveys-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Creator</th>
+                                    <th>Status</th>
+                                    <th>Responses</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Employee Satisfaction</td>
+                                    <td>John Doe</td>
+                                    <td>Active</td>
+                                    <td>15</td>
+                                    <td>Mar 18, 2025</td>
+                                    <td>
+                                        <button class="action-btn view-btn" onclick="viewSurvey('employee-satisfaction')">View</button>
+                                        <button class="action-btn approve-btn" onclick="approveSurvey('employee-satisfaction')">Approve</button>
+                                        <button class="action-btn delete-btn" onclick="deleteSurvey('employee-satisfaction')">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Market Research</td>
+                                    <td>Jane Smith</td>
+                                    <td>Pending</td>
+                                    <td>0</td>
+                                    <td>Mar 20, 2025</td>
+                                    <td>
+                                        <button class="action-btn view-btn" onclick="viewSurvey('market-research')">View</button>
+                                        <button class="action-btn approve-btn" onclick="approveSurvey('market-research')">Approve</button>
+                                        <button class="action-btn delete-btn" onclick="deleteSurvey('market-research')">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Customer Feedback</td>
+                                    <td>Mike Ross</td>
+                                    <td>Active</td>
+                                    <td>25</td>
+                                    <td>Mar 15, 2025</td>
+                                    <td>
+                                        <button class="action-btn view-btn" onclick="viewSurvey('customer-feedback')">View</button>
+                                        <button class="action-btn approve-btn" onclick="approveSurvey('customer-feedback')">Approve</button>
+                                        <button class="action-btn delete-btn" onclick="deleteSurvey('customer-feedback')">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Product Preferences</td>
+                                    <td>Sarah Lee</td>
+                                    <td>Pending</td>
+                                    <td>0</td>
+                                    <td>Mar 22, 2025</td>
+                                    <td>
+                                        <button class="action-btn view-btn" onclick="viewSurvey('product-preferences')">View</button>
+                                        <button class="action-btn approve-btn" onclick="approveSurvey('product-preferences')">Approve</button>
+                                        <button class="action-btn delete-btn" onclick="deleteSurvey('product-preferences')">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-content" id="pending-surveys">
+                    <div class="search-container">
+                        <input type="text" id="pending-surveys-search" placeholder="Search pending surveys..." onkeyup="searchTable('pending-surveys-search', 'pending-surveys-table')">
+                    </div>
+                    <div class="table-container">
+                        <table class="survey-table" id="pending-surveys-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Creator</th>
+                                    <th>Status</th>
+                                    <th>Responses</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Market Research</td>
+                                    <td>Jane Smith</td>
+                                    <td>Pending</td>
+                                    <td>0</td>
+                                    <td>Mar 20, 2025</td>
+                                    <td>
+                                        <button class="action-btn view-btn" onclick="viewSurvey('market-research')">View</button>
+                                        <button class="action-btn approve-btn" onclick="approveSurvey('market-research')">Approve</button>
+                                        <button class="action-btn delete-btn" onclick="deleteSurvey('market-research')">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Product Preferences</td>
+                                    <td>Sarah Lee</td>
+                                    <td>Pending</td>
+                                    <td>0</td>
+                                    <td>Mar 22, 2025</td>
+                                    <td>
+                                        <button class="action-btn view-btn" onclick="viewSurvey('product-preferences')">View</button>
+                                        <button class="action-btn approve-btn" onclick="approveSurvey('product-preferences')">Approve</button>
+                                        <button class="action-btn delete-btn" onclick="deleteSurvey('product-preferences')">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Management Section -->
+        <section id="users" class="content-section">
+            <h1>User Management</h1>
+            <div class="filter-container">
+                <label for="user-type-filter">Filter by Type:</label>
+                <select id="user-type-filter" onchange="filterUsers()">
+                    <option value="all">All</option>
+                    <option value="creator">Creators</option>
+                    <option value="responder">Responders</option>
+                </select>
+            </div>
+            <div class="search-container">
+                <input type="text" id="users-search" placeholder="Search users..." onkeyup="searchTable('users-search', 'user-table')">
+            </div>
+            <div class="table-container">
+                <table class="user-table" id="user-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">
+                        <tr data-type="creator">
+                            <td>John Doe</td>
+                            <td>johndoe@example.com</td>
+                            <td>Creator</td>
+                            <td>Active</td>
+                            <td>
+                                <button class="action-btn view-btn" onclick="viewUser('john-doe')">View</button>
+                                <button class="action-btn edit-btn" onclick="editUser('john-doe')">Edit</button>
+                                <button class="action-btn delete-btn" onclick="deleteUser('john-doe')">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-type="responder">
+                            <td>Jane Doe</td>
+                            <td>janedoe@example.com</td>
+                            <td>Responder</td>
+                            <td>Active</td>
+                            <td>
+                                <button class="action-btn view-btn" onclick="viewUser('jane-doe')">View</button>
+                                <button class="action-btn edit-btn" onclick="editUser('jane-doe')">Edit</button>
+                                <button class="action-btn delete-btn" onclick="deleteUser('jane-doe')">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-type="creator">
+                            <td>Mike Ross</td>
+                            <td>mikeross@example.com</td>
+                            <td>Creator</td>
+                            <td>Inactive</td>
+                            <td>
+                                <button class="action-btn view-btn" onclick="viewUser('mike-ross')">View</button>
+                                <button class="action-btn edit-btn" onclick="editUser('mike-ross')">Edit</button>
+                                <button class="action-btn delete-btn" onclick="deleteUser('mike-ross')">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-type="responder">
+                            <td>Sarah Lee</td>
+                            <td>sarahlee@example.com</td>
+                            <td>Responder</td>
+                            <td>Active</td>
+                            <td>
+                                <button class="action-btn view-btn" onclick="viewUser('sarah-lee')">View</button>
+                                <button class="action-btn edit-btn" onclick="editUser('sarah-lee')">Edit</button>
+                                <button class="action-btn delete-btn" onclick="deleteUser('sarah-lee')">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Activity Log Section -->
+        <section id="logs" class="content-section">
+            <h1>Activity Log</h1>
+            <div class="search-container">
+                <input type="text" id="logs-search" placeholder="Search logs..." onkeyup="searchTable('logs-search', 'logs-table')">
+            </div>
+            <div class="table-container">
+                <table class="log-table" id="logs-table">
+                    <thead>
+                        <tr>
+                            <th>Date/Time</th>
+                            <th>User</th>
+                            <th>Action</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mar 24, 2025 10:15 AM</td>
+                            <td>John Doe</td>
+                            <td>Created Survey</td>
+                            <td>Survey "Employee Satisfaction" created</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 24, 2025 9:50 AM</td>
+                            <td>Admin User</td>
+                            <td>Approved Survey</td>
+                            <td>Survey "Customer Feedback" approved</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 23, 2025 3:20 PM</td>
+                            <td>Jane Doe</td>
+                            <td>Completed Survey</td>
+                            <td>Survey "Product Preferences" completed</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 23, 2025 1:10 PM</td>
+                            <td>Mike Ross</td>
+                            <td>User Registration</td>
+                            <td>New responder registered</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 22, 2025 11:45 AM</td>
+                            <td>Sarah Lee</td>
+                            <td>Created Survey</td>
+                            <td>Survey "Product Preferences" created</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Account Section -->
+        <section id="account" class="content-section">
+            <h1>Account</h1>
+            <div class="account-card">
+                <div id="account-view" class="account-view">
+                    <h2>Your Details</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>First Name</label>
+                            <p>Admin</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Last Name</label>
+                            <p>User</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Email</label>
+                            <p>admin@surveyapp.com</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone Number</label>
+                            <p>+233xxxxxxxxx</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Role</label>
+                            <p>Main Admin</p>
+                        </div>
+                    </div>
+                    <button class="edit-btn" onclick="editAccount()">Edit Details</button>
+                    <div class="security-settings">
+                        <h2>Security</h2>
+                        <div class="info-item">
+                            <label>Password</label>
+                            <button class="change-password-btn" onclick="changePassword()">Change Password</button>
+                        </div>
+                        <div class="info-item">
+                            <label>Delete Account</label>
+                            <button class="delete-btn" onclick="deleteAccount()">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="account-edit" class="account-edit hidden">
+                    <h2>Edit Details</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>First Name</label>
+                            <input type="text" value="Admin">
+                        </div>
+                        <div class="info-item">
+                            <label>Last Name</label>
+                            <input type="text" value="User">
+                        </div>
+                        <div class="info-item">
+                            <label>Email</label>
+                            <input type="email" value="admin@surveyapp.com" disabled>
+                            <button class="verify-btn" onclick="verifyEmail()">Verify</button>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone Number</label>
+                            <input type="tel" value="+233xxxxxxxxx">
+                        </div>
+                    </div>
+                    <button class="save-btn" onclick="saveAccount()">Save Changes</button>
+                    <button class="cancel-btn" onclick="cancelEdit()">Cancel</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">×</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-message"></p>
+            <div class="modal-actions">
+                <button class="modal-btn confirm-btn" id="modal-confirm"></button>
+                <button class="modal-btn cancel-btn" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toaster Container -->
+    <div class="toaster-container" id="toaster-container"></div>
+
+    <script src="~/js/dashboard2.js"></script>
+</body>
+</html>
