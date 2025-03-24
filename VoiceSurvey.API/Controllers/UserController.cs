@@ -39,7 +39,7 @@ namespace VoiceSurvey.API.Controllers
             return Ok(user);
         }
 
-        [Authorize(Roles = "Admin")]
+        [AllowAnonymous]
         [HttpPost("AddRole")]
         public async Task<IActionResult> AddRole([FromBody] string roleName)
         {
@@ -107,7 +107,7 @@ namespace VoiceSurvey.API.Controllers
             return Ok(new { user = user.UserName, roles });
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpDelete("DeleteUser/{userId}")]
         public async Task<IActionResult> DeleteUser(string userId)
         {
