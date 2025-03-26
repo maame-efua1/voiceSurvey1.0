@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+OjvACOKZ4Q=",
+  "dgSpecHash": "mgVf2EuyQ6k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eugenia Efua Quartey\\source\\repos\\VoiceSurvey.API\\VoiceSurvey.API.csproj",
+  "projectFilePath": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\VoiceSurvey.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
@@ -57,6 +57,7 @@
     "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",

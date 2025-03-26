@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{02486BDD-AFC1-B407-5186-9CC7E998A0A5}|VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj|c:\\users\\eugenia efua quartey\\desktop\\voicesurvey\\voicesurvey.frontend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02486BDD-AFC1-B407-5186-9CC7E998A0A5}|VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj|solutionrelative:voicesurvey.frontend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02486BDD-AFC1-B407-5186-9CC7E998A0A5}|VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj|c:\\users\\eugenia efua quartey\\desktop\\voicesurvey\\voicesurvey.frontend\\views\\register\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{02486BDD-AFC1-B407-5186-9CC7E998A0A5}|VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj|solutionrelative:voicesurvey.frontend\\views\\register\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02486BDD-AFC1-B407-5186-9CC7E998A0A5}|VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj|c:\\users\\eugenia efua quartey\\desktop\\voicesurvey\\voicesurvey.frontend\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02486BDD-AFC1-B407-5186-9CC7E998A0A5}|VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj|solutionrelative:voicesurvey.frontend\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02486BDD-AFC1-B407-5186-9CC7E998A0A5}|VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj|c:\\users\\eugenia efua quartey\\desktop\\voicesurvey\\voicesurvey.frontend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02486BDD-AFC1-B407-5186-9CC7E998A0A5}|VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj|solutionrelative:voicesurvey.frontend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B864AAF3-9D95-4C5E-B030-49E5D0FFC175}|VoiceSurvey.API\\VoiceSurvey.API.csproj|c:\\users\\eugenia efua quartey\\desktop\\voicesurvey\\voicesurvey.api\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B864AAF3-9D95-4C5E-B030-49E5D0FFC175}|VoiceSurvey.API\\VoiceSurvey.API.csproj|solutionrelative:voicesurvey.api\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B864AAF3-9D95-4C5E-B030-49E5D0FFC175}|VoiceSurvey.API\\VoiceSurvey.API.csproj|c:\\users\\eugenia efua quartey\\desktop\\voicesurvey\\voicesurvey.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B864AAF3-9D95-4C5E-B030-49E5D0FFC175}|VoiceSurvey.API\\VoiceSurvey.API.csproj|solutionrelative:voicesurvey.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "VoiceSurvey.Frontend\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\Models\\User.cs",
+              "RelativeToolTip": "VoiceSurvey.Frontend\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:22:54.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "VoiceSurvey.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "VoiceSurvey.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwDcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:13:58.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\Models\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "VoiceSurvey.API\\Models\\LoginResponse.cs",
+              "ToolTip": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\Models\\LoginResponse.cs",
+              "RelativeToolTip": "VoiceSurvey.API\\Models\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:12:52.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "VoiceSurvey.Frontend\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "VoiceSurvey.Frontend\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:44:02.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "VoiceSurvey.Frontend\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "VoiceSurvey.Frontend\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:33:17.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\Views\\Register\\Index.cshtml",
+              "RelativeDocumentMoniker": "VoiceSurvey.Frontend\\Views\\Register\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\Views\\Register\\Index.cshtml",
+              "RelativeToolTip": "VoiceSurvey.Frontend\\Views\\Register\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T11:29:17.443Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

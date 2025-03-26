@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eugenia Efua Quartey\\source\\repos\\VoiceSurvey.API\\VoiceSurvey.API.csproj": {}
+    "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\VoiceSurvey.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eugenia Efua Quartey\\source\\repos\\VoiceSurvey.API\\VoiceSurvey.API.csproj": {
+    "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\VoiceSurvey.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eugenia Efua Quartey\\source\\repos\\VoiceSurvey.API\\VoiceSurvey.API.csproj",
+        "projectUniqueName": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\VoiceSurvey.API.csproj",
         "projectName": "VoiceSurvey.API",
-        "projectPath": "C:\\Users\\Eugenia Efua Quartey\\source\\repos\\VoiceSurvey.API\\VoiceSurvey.API.csproj",
+        "projectPath": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\VoiceSurvey.API.csproj",
         "packagesPath": "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eugenia Efua Quartey\\source\\repos\\VoiceSurvey.API\\obj\\",
+        "outputPath": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,7 +31,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj": {
+                "projectPath": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -76,9 +80,87 @@
               "target": "Package",
               "version": "[9.0.3, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj",
+        "projectName": "VoiceSurvey.Frontend",
+        "projectPath": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\VoiceSurvey.Frontend.csproj",
+        "packagesPath": "C:\\Users\\Eugenia Efua Quartey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Eugenia Efua Quartey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

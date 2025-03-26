@@ -24,7 +24,7 @@ public class AuthController : ControllerBase
 
     // REGISTER
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegisterModel model)
+    public async Task<IActionResult> Register([FromBody] Register model)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -42,25 +42,28 @@ public class AuthController : ControllerBase
 
     // LOGIN
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] LoginModel model)
-    {
-        if (!ModelState.IsValid) return BadRequest(ModelState);
+public async Task<IActionResult> Login([FromBody] Login model)
+{
+    if (!ModelState.IsValid) 
+        return BadRequest(new { Message = "Invalid request" });
 
-        var user = await _userManager.FindByEmailAsync(model.Email);
-        if (user == null) return Unauthorized(new { Message = "Invalid login attempt" });
+    var user = await _userManager.FindByEmailAsync(model.Email);
+    if (user == null) 
+        return Unauthorized(new LoginResponse { Message = "Invalid login attempt" });
 
-        var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
-        if (!result.Succeeded) return Unauthorized(new { Message = "Invalid login attempt" });
+    var result = await _signInManager.PasswordSignInAsync(user.Email, model.Password, false, false);
+    if (!result.Succeeded) 
+        return Unauthorized(new LoginResponse { Message = "Invalid login attempt" });
 
-        // Generate JWT token
-        var token = GenerateJwtToken(user);
+    var token = GenerateJwtToken(user);
 
-        return Ok(new 
-        { 
-            Message = "Login successful",
-            Token = token
-        });
-    }
+    return Ok(new LoginResponse
+    { 
+        Message = "Login successful",
+        Token = token
+    });
+}
+
 
     // LOGOUT
     [HttpPost("logout")]

@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "VoiceSurvey.API.Models.LoginModel",
+        "Type": "VoiceSurvey.API.Models.Login",
         "IsRequired": true
       }
     ],
@@ -35,7 +35,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "VoiceSurvey.API.Models.RegisterModel",
+        "Type": "VoiceSurvey.API.Models.Register",
         "IsRequired": true
       }
     ],

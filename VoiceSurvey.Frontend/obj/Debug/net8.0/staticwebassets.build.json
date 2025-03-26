@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uY6VRb8ILmg/hBIejxXMBrPpqiHEanVHho4Jp2JuznQ=",
+  "Hash": "3OBY6sPxXxLQKB3E/rpYgHXHOnYfViyVDCrMbbxzXMg=",
   "Source": "VoiceSurvey.Frontend",
   "BasePath": "_content/VoiceSurvey.Frontend",
   "Mode": "Default",
@@ -1753,8 +1753,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "98onwy8oiu",
-      "Integrity": "l73IbZbqEAmY9Pp+NkVoNlrqffgjxkUY85kv3Xh0Ta4=",
+      "Fingerprint": "xuagusdg41",
+      "Integrity": "+Th2PL851csCBDXcBYLcxPTdEw9ZWFwWfawhzpWpdcc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\register.js"
@@ -8507,51 +8507,6 @@
       ]
     },
     {
-      "Route": "js/register.98onwy8oiu.js",
-      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\register.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4171"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"l73IbZbqEAmY9Pp+NkVoNlrqffgjxkUY85kv3Xh0Ta4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 14:07:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "98onwy8oiu"
-        },
-        {
-          "Name": "label",
-          "Value": "js/register.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-l73IbZbqEAmY9Pp+NkVoNlrqffgjxkUY85kv3Xh0Ta4="
-        }
-      ]
-    },
-    {
       "Route": "js/register.js",
       "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\register.js",
       "Selectors": [],
@@ -8562,7 +8517,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4171"
+          "Value": "3823"
         },
         {
           "Name": "Content-Type",
@@ -8570,11 +8525,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"l73IbZbqEAmY9Pp+NkVoNlrqffgjxkUY85kv3Xh0Ta4=\""
+          "Value": "\"+Th2PL851csCBDXcBYLcxPTdEw9ZWFwWfawhzpWpdcc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 14:07:14 GMT"
+          "Value": "Wed, 26 Mar 2025 11:54:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8584,7 +8539,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-l73IbZbqEAmY9Pp+NkVoNlrqffgjxkUY85kv3Xh0Ta4="
+          "Value": "sha256-+Th2PL851csCBDXcBYLcxPTdEw9ZWFwWfawhzpWpdcc="
+        }
+      ]
+    },
+    {
+      "Route": "js/register.xuagusdg41.js",
+      "AssetFile": "C:\\Users\\Eugenia Efua Quartey\\Desktop\\VoiceSurvey\\VoiceSurvey.Frontend\\wwwroot\\js\\register.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3823"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+Th2PL851csCBDXcBYLcxPTdEw9ZWFwWfawhzpWpdcc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 11:54:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xuagusdg41"
+        },
+        {
+          "Name": "label",
+          "Value": "js/register.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+Th2PL851csCBDXcBYLcxPTdEw9ZWFwWfawhzpWpdcc="
         }
       ]
     },

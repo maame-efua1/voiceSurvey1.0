@@ -60,15 +60,7 @@ function prevStep() {
 }
 
 // Handle Login submission
-function login(event) {
-    event.preventDefault();
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
 
-    const loginData = { email, password };
-    console.log('Login Data:', loginData);
-    alert('Login submitted!'); // Replace with actual login logic
-}
 
 // Handle Forgot Password submission
 function resetPassword(event) {
