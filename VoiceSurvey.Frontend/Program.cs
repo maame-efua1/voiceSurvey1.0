@@ -1,3 +1,6 @@
+using VoiceSurvey.Frontend.Interfaces;
+using VoiceSurvey.Frontend.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,7 +14,10 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-
+builder.Services.AddHttpClient<IAuthService, AuthService>(client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5091/"); // API URL
+});
 builder.Services.AddHttpClient();
 
 var app = builder.Build();

@@ -33,4 +33,3 @@ C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\bin\Debug
 C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\bin\Debug\net8.0\VoiceSurvey.Frontend.runtimeconfig.json
 C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\obj\Debug\net8.0\VoiceSurvey.Frontend.genruntimeconfig.cache
 C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\obj\Debug\net8.0\ref\VoiceSurvey.Frontend.dll
-C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

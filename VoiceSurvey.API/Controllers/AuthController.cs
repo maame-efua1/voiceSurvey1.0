@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -6,6 +7,9 @@ using System.Security.Claims;
 using System.Text;
 using VoiceSurvey.API.Models;
 using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -23,47 +27,61 @@ public class AuthController : ControllerBase
     }
 
     // REGISTER
-    [HttpPost("register")]
+    [AllowAnonymous]
+    [HttpPost("Register")]
     public async Task<IActionResult> Register([FromBody] Register model)
     {
-        if (!ModelState.IsValid) return BadRequest(ModelState);
+       if (model == null)
+           return BadRequest(new { message = "Invalid request" });
 
-        var user = new IdentityUser 
-        { 
-            UserName = model.Email, 
-            Email = model.Email 
-        };
-        var result = await _userManager.CreateAsync(user, model.Password);
+       if (model.Password != model.ConfirmPassword)
+           return BadRequest(new { message = "Passwords do not match" });
 
-        if (!result.Succeeded) return BadRequest(result.Errors);
+       var existingUser = await _userManager.FindByEmailAsync(model.Email);
+       if (existingUser != null)
+           return BadRequest(new { message = "Email already in use" });
 
-        return Ok(new { Message = "User registered successfully" });
+       var user = new Register
+       {
+           UserName = model.UserName,
+           Email = model.Email,
+           PhoneNumber = model.PhoneNumber,
+           FirstName = model.FirstName,
+           LastName = model.LastName,
+           Gender = model.Gender,
+           Region = model.Region,
+           City = model.City,
+           DateOfBirth = model.DateOfBirth
+       };
+
+       var result = await _userManager.CreateAsync(user, model.Password);
+       return Ok(new { message = "User registered successfully" });
     }
+
 
     // LOGIN
     [HttpPost("login")]
-public async Task<IActionResult> Login([FromBody] Login model)
-{
-    if (!ModelState.IsValid) 
-        return BadRequest(new { Message = "Invalid request" });
+    public async Task<IActionResult> Login([FromBody] Login model)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(new { Message = "Invalid request" });
 
-    var user = await _userManager.FindByEmailAsync(model.Email);
-    if (user == null) 
-        return Unauthorized(new LoginResponse { Message = "Invalid login attempt" });
+        var user = await _userManager.FindByEmailAsync(model.Email);
+        if (user == null)
+            return Unauthorized(new LoginResponse { Message = "Invalid login attempt" });
 
-    var result = await _signInManager.PasswordSignInAsync(user.Email, model.Password, false, false);
-    if (!result.Succeeded) 
-        return Unauthorized(new LoginResponse { Message = "Invalid login attempt" });
+        var result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, false, false);
+        if (!result.Succeeded)
+            return Unauthorized(new LoginResponse { Message = "Invalid login attempt" });
 
-    var token = GenerateJwtToken(user);
+        var token = await GenerateJwtToken(user);
 
-    return Ok(new LoginResponse
-    { 
-        Message = "Login successful",
-        Token = token
-    });
-}
-
+        return Ok(new LoginResponse
+        {
+            Message = "Login successful",
+            Token = token
+        });
+    }
 
     // LOGOUT
     [HttpPost("logout")]
@@ -73,16 +91,21 @@ public async Task<IActionResult> Login([FromBody] Login model)
         return Ok(new { Message = "Logged out successfully" });
     }
 
-    // GENERATE JWT TOKEN
-    private string GenerateJwtToken(IdentityUser user)
+    // GENERATE JWT TOKEN WITH ROLES
+    private async Task<string> GenerateJwtToken(IdentityUser user)
     {
         var key = Encoding.UTF8.GetBytes(_configuration["JwtSettings:Secret"]);
-        var claims = new[]
+        var roles = await _userManager.GetRolesAsync(user);
+
+        var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.Email),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             new Claim(ClaimTypes.NameIdentifier, user.Id)
         };
+
+        // Add roles to claims
+        claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
         var token = new JwtSecurityToken(
             issuer: _configuration["JwtSettings:Issuer"],
@@ -93,5 +116,34 @@ public async Task<IActionResult> Login([FromBody] Login model)
         );
 
         return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+
+    // VALIDATE TOKEN
+    [HttpPost("validate-token")]
+    public IActionResult ValidateToken([FromBody] string token)
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var key = Encoding.UTF8.GetBytes(_configuration["JwtSettings:Secret"]);
+
+        try
+        {
+            tokenHandler.ValidateToken(token, new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = true,
+                ValidIssuer = _configuration["JwtSettings:Issuer"],
+                ValidateAudience = true,
+                ValidAudience = _configuration["JwtSettings:Audience"],
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.Zero
+            }, out SecurityToken validatedToken);
+
+            return Ok(new { Message = "Token is valid" });
+        }
+        catch
+        {
+            return Unauthorized(new { Message = "Invalid or expired token" });
+        }
     }
 }

@@ -4,13 +4,7 @@ public class DashboardController : Controller
 {
        public IActionResult Index()
     {
-        var token = HttpContext.Session.GetString("AuthToken");
-        if (string.IsNullOrEmpty(token))
-        {
-            return RedirectToAction("Login", "Register");
-        }
-
-        ViewBag.Token = token;
+        
         return View();
     }
       

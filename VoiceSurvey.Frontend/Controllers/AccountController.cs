@@ -1,50 +1,46 @@
-using Newtonsoft.Json;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using VoiceSurvey.Frontend.Interfaces;
 using VoiceSurvey.Frontend.Models;
 
 public class AccountController : Controller
 {
-    private readonly IHttpClientFactory _httpClientFactory;
+    private readonly IAuthService _authService;
 
-    [ActivatorUtilitiesConstructor]
-    public AccountController(IHttpClientFactory httpClientFactory)
+    public AccountController(IAuthService authService)
     {
-        _httpClientFactory = httpClientFactory;
-
+        _authService = authService;
     }
 
-
+    // Register action
     [HttpPost]
-    public async Task<IActionResult> Login(string email, string password)
+    public async Task<IActionResult> Register(Register model)
     {
-        var loginData = new User
+        if (ModelState.IsValid)
         {
-            Email = email,
-            Password = password
-        };
-        Console.WriteLine("Login Data: " + loginData);
-        string jsonData = JsonConvert.SerializeObject(loginData);
-        var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var response = await _authService.RegisterAsync(model);
+            return RedirectToAction("Login");
+        }
 
-        var client = _httpClientFactory.CreateClient(); 
-        HttpResponseMessage response = await client.PostAsync("http://localhost:5091/api/Auth/login", content);
+        return View(model);
+    }
 
-        if (response.IsSuccessStatusCode)
+    // Login action
+    [HttpPost]
+    public async Task<IActionResult> Login(Login model)
+    {
+        if (ModelState.IsValid)
         {
-            string responseData = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<User>(responseData);
-
-            // Store the token in session or cookie
-            HttpContext.Session.SetString("AuthToken", result.Token);
-
-Console.WriteLine("Token: " + result.Token);
+            var response = await _authService.LoginAsync(model);
             return RedirectToAction("Index", "Dashboard");
         }
-        
-        ViewBag.Error = "Invalid login credentials";
-        return View();
+
+        return View(model);
+    }
+
+    // Logout action
+    public async Task<IActionResult> Logout()
+    {
+        var response = await _authService.LogoutAsync();
+        return RedirectToAction("Index", "Home");
     }
 }

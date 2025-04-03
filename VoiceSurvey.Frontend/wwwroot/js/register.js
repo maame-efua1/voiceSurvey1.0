@@ -12,7 +12,6 @@ function toggleForm(form) {
         loginBox.classList.add('hidden');
         signupBox.classList.remove('hidden');
         forgotPasswordBox.classList.add('hidden');
-        // Reset to Step 1 when showing signup
         document.getElementById('signup-step-1').classList.add('active');
         document.getElementById('signup-step-2').classList.remove('active');
     }
@@ -32,21 +31,20 @@ function nextStep() {
     const step1 = document.getElementById('signup-step-1');
     const step2 = document.getElementById('signup-step-2');
 
-    // Check if all required fields in Step 1 are filled
     const firstname = document.getElementById('signup-firstname').value.trim();
     const lastname = document.getElementById('signup-lastname').value.trim();
     const username = document.getElementById('signup-username').value.trim();
     const email = document.getElementById('signup-email').value.trim();
+    const phone = document.getElementById('signup-phone').value.trim();
 
-    if (firstname === '' || lastname === '' || username === '' || email === '') {
+    if (firstname === '' || lastname === '' || username === '' || email === '' || phone === '') {
         alert('Please fill out all fields in Step 1.');
-        return; // Stop execution if validation fails
+        return;
     }
 
-    // If validation passes, switch steps
     step1.classList.remove('active');
     step2.classList.add('active');
-    console.log('Moved to Step 2'); // Debug log
+    console.log('Moved to Step 2');
 }
 
 // Navigate to previous step in Sign Up
@@ -56,49 +54,50 @@ function prevStep() {
 
     step2.classList.remove('active');
     step1.classList.add('active');
-    console.log('Moved to Step 1'); // Debug log
+    console.log('Moved to Step 1');
 }
 
 // Handle Login submission
+async function login(email, password) {
+    const loginPayload = {
+        email: email,
+        password: password
+    };
+
+    const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginPayload)
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+        // Save the token in localStorage
+        localStorage.setItem('jwtToken', data.token);
+        alert('Login successful!');
+    } else {
+        alert('Login failed: ' + data.message);
+    }
+}
+
+//Handle Logout
+function logout() {
+    localStorage.removeItem('jwtToken');
+    alert('You have logged out');
+}
 
 
-// Handle Forgot Password submission
-function resetPassword(event) {
-    event.preventDefault();
-    const email = document.getElementById('forgot-email').value;
-
-    console.log('Reset Password Email:', email);
-    alert('Password reset link sent!'); // Replace with actual reset logic
+// Handle Forgot Password submission (Placeholder)
+async function resetPassword(event) {
+    
 }
 
 // Handle Sign Up submission
-function signup(event) {
-    event.preventDefault();
-
-    const firstname = document.getElementById('signup-firstname').value;
-    const lastname = document.getElementById('signup-lastname').value;
-    const username = document.getElementById('signup-username').value;
-    const email = document.getElementById('signup-email').value;
-    const phone = document.getElementById('signup-phone').value;
-    const gender = document.getElementById('signup-gender').value;
-    const region = document.getElementById('signup-region').value;
-    const city = document.getElementById('signup-city').value;
-    const age = document.getElementById('signup-age').value;
-    const password = document.getElementById('signup-password').value;
-
-    const signupData = {
-        firstname,
-        lastname,
-        username,
-        email,
-        phone,
-        gender,
-        region,
-        city,
-        age,
-        password
-    };
-
-    console.log('Signup Data:', signupData);
-    alert('Sign Up submitted!'); // Replace with actual signup logic
+async function signup(event) { 
 }
+
+// Attach login function to form submission (since asp-* tags are overridden)
+document.getElementById('login-form').addEventListener('submit', login);

@@ -6727,6 +6727,51 @@
       ]
     },
     {
+      "Route": "js/register.8ievdvufuj.js",
+      "AssetFile": "js/register.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MARxAPaRQRt3anIKxDn0ufB4it4OqXYnHBkcIKzVMLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 16:24:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8ievdvufuj"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MARxAPaRQRt3anIKxDn0ufB4it4OqXYnHBkcIKzVMLk="
+        },
+        {
+          "Name": "label",
+          "Value": "js/register.js"
+        }
+      ]
+    },
+    {
       "Route": "js/register.js",
       "AssetFile": "js/register.js",
       "Selectors": [],
@@ -6741,7 +6786,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3823"
+          "Value": "3364"
         },
         {
           "Name": "Content-Type",
@@ -6749,62 +6794,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+Th2PL851csCBDXcBYLcxPTdEw9ZWFwWfawhzpWpdcc=\""
+          "Value": "\"MARxAPaRQRt3anIKxDn0ufB4it4OqXYnHBkcIKzVMLk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 11:54:04 GMT"
+          "Value": "Thu, 03 Apr 2025 16:24:23 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+Th2PL851csCBDXcBYLcxPTdEw9ZWFwWfawhzpWpdcc="
-        }
-      ]
-    },
-    {
-      "Route": "js/register.xuagusdg41.js",
-      "AssetFile": "js/register.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3823"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+Th2PL851csCBDXcBYLcxPTdEw9ZWFwWfawhzpWpdcc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 11:54:04 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xuagusdg41"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+Th2PL851csCBDXcBYLcxPTdEw9ZWFwWfawhzpWpdcc="
-        },
-        {
-          "Name": "label",
-          "Value": "js/register.js"
+          "Value": "sha256-MARxAPaRQRt3anIKxDn0ufB4it4OqXYnHBkcIKzVMLk="
         }
       ]
     },

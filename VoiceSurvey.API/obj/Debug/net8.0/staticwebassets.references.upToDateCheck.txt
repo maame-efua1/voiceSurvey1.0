@@ -3,3 +3,5 @@ C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\obj\Debug
 C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.Frontend\obj\Debug\net8.0\staticwebassets.build.json

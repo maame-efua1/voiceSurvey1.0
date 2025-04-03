@@ -367,4 +367,3 @@ C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.API\obj\Debug\net8
 C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.API\obj\Debug\net8.0\VoiceSurvey.API.pdb
 C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.API\obj\Debug\net8.0\VoiceSurvey.API.genruntimeconfig.cache
 C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.API\obj\Debug\net8.0\ref\VoiceSurvey.API.dll
-C:\Users\Eugenia Efua Quartey\Desktop\VoiceSurvey\VoiceSurvey.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

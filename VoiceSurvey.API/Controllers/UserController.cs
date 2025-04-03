@@ -25,7 +25,21 @@ namespace VoiceSurvey.API.Controllers
         public async Task<IActionResult> GetUsers()
         {
             var users = await _userManager.Users.AsNoTracking().ToListAsync();
-            return Ok(users);
+            var userList = new List<object>();
+
+            foreach (var user in users)
+            {
+                var roles = await _userManager.GetRolesAsync(user);
+                userList.Add(new
+                {
+                    user.Id,
+                    user.UserName,
+                    user.Email,
+                    Roles = roles
+                });
+            }
+
+            return Ok(userList);
         }
 
         [Authorize]
@@ -36,7 +50,15 @@ namespace VoiceSurvey.API.Controllers
             if (user == null)
                 return NotFound(new { message = "User not found" });
 
-            return Ok(user);
+            var roles = await _userManager.GetRolesAsync(user);
+
+            return Ok(new
+            {
+                user.Id,
+                user.UserName,
+                user.Email,
+                Roles = roles
+            });
         }
 
         [AllowAnonymous]
@@ -57,6 +79,14 @@ namespace VoiceSurvey.API.Controllers
         }
 
         [Authorize(Roles = "Admin")]
+        [HttpGet("GetAllRoles")]
+        public async Task<IActionResult> GetAllRoles()
+        {
+            var roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+            return Ok(roles);
+        }
+
+        [Authorize(Roles = "Admin")]
         [HttpPost("AssignRole/{userId}")]
         public async Task<IActionResult> AssignRole(string userId, [FromBody] string roleName)
         {
@@ -69,6 +99,9 @@ namespace VoiceSurvey.API.Controllers
 
             if (!await _roleManager.RoleExistsAsync(roleName))
                 return BadRequest(new { message = "Role does not exist" });
+
+            if (await _userManager.IsInRoleAsync(user, roleName))
+                return BadRequest(new { message = "User is already in this role" });
 
             var result = await _userManager.AddToRoleAsync(user, roleName);
             if (!result.Succeeded)
@@ -87,6 +120,9 @@ namespace VoiceSurvey.API.Controllers
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
                 return NotFound(new { message = "User not found" });
+
+            if (!await _userManager.IsInRoleAsync(user, roleName))
+                return BadRequest(new { message = "User is not in this role" });
 
             var result = await _userManager.RemoveFromRoleAsync(user, roleName);
             if (!result.Succeeded)
@@ -107,7 +143,7 @@ namespace VoiceSurvey.API.Controllers
             return Ok(new { user = user.UserName, roles });
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("DeleteUser/{userId}")]
         public async Task<IActionResult> DeleteUser(string userId)
         {
